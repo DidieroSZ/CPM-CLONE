@@ -23,7 +23,7 @@ export class RutasComponent extends LitElement {
 
     render() {
         return html`
-            <section class="rutas-container general-container d-flexx d-row">
+            <section id="ruta" class="rutas-container general-container d-flexx d-row">
                 <article class="rutas-text-side">
                     <div class="title-rutas">
                         <p class="cpm-carrera-font">Elige tu reto</p>

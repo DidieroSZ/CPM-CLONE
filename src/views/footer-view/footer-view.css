@@ -1,5 +1,14 @@
 .footer{
-    height: 500px;
+    min-height: 250px;
     background-color: var(--N300);
     margin: 0;
+    padding: 64px max(20px, 8vw) 26px;
+    color: var(--Blanco);
 }
+.footer-main { display: flex; justify-content: space-between; align-items: end; gap: 32px; max-width: 1100px; margin: auto; padding-bottom: 58px; }
+.footer-main img { width: 72px; height: 72px; object-fit: contain; }
+.footer-main p { margin-top: 14px; color: var(--V100); font-size: 13px; text-transform: uppercase; }
+.footer-main a { color: var(--Blanco); text-decoration: none; border-bottom: 1px solid var(--V100); padding-bottom: 8px; font-weight: 800; }
+.footer-main a span { margin-left: 12px; color: var(--V100); font-size: 20px; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 16px; max-width: 1100px; margin: auto; padding-top: 20px; border-top: 1px solid #383b38; color: #9ca39c; font-size: 12px; }
+@media (max-width: 600px) { .footer-main, .footer-bottom { flex-direction: column; align-items: flex-start; } }

@@ -39,22 +39,23 @@ export class NavComponent extends LitElement {
                 </div>
 
                 <ul class="item-nav links-nav-container d-flexx d-row">
-                    <li>Inicio</li>
-                    <li>Reglamento</li>
-                    <li>Categorias</li>
-                    <li>Premiacion</li>
-                    <li>Playera</li>
-                    <li>Medalla</li>
-                    <li>Ruta</li>
+                    <li><a href="#carrera">Inicio</a></li>
+                    <li><a href="#convocatoria">Convocatoria</a></li>
+                    <li><a href="#bases">Bases</a></li>
+                    <li><a href="#premiacion">Premiación</a></li>
+                    <li><a href="#ruta">Ruta</a></li>
                 </ul>
 
                 <div class="item-nav">
-                    <button class="btn-general btn-cta">¡Registrate!</button>
+                    <button class="btn-general btn-cta" @click=${() => this.requestRegistration()}>¡Regístrate!</button>
                 </div>
 
             </nav>
         `;
-    };
+    }
 
+    requestRegistration() {
+        this.dispatchEvent(new CustomEvent('register-request', { bubbles: true, composed: true }));
+    }
 }
 customElements.define('nav-component', NavComponent);

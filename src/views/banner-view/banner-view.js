@@ -9,6 +9,7 @@ import innerStyles from './banner-view.css?inline';
 
 /* --- ICONS --- */
 import { icons } from '../../utils/icons.js'
+import { gsap } from 'gsap';
 /* --- ICONS --- */
 
 export class BannerView extends LitElement {
@@ -17,6 +18,12 @@ export class BannerView extends LitElement {
         css`${unsafeCSS(generalStyles)}`,
         css`${unsafeCSS(innerStyles)}`,
     ];
+
+    firstUpdated() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        gsap.from(this.renderRoot.querySelector('.banner-cta-container'), { opacity: 0, y: 36, duration: 1, ease: 'power3.out' });
+        gsap.from(this.renderRoot.querySelector('.banner-pill-date'), { opacity: 0, y: -14, duration: .7, delay: .2, ease: 'power2.out' });
+    }
 
     render() {
         return html`
@@ -30,7 +37,7 @@ export class BannerView extends LitElement {
                     Transformando vidas”</b> 5 Y 10 Kilómetros.
                     </p>
                     <div class="btns-cta-container d-flexx d-row">
-                        <button class="btn-general btn-white">Obtener Kit</button>
+                        <button class="btn-general btn-white" @click=${() => this.requestRegistration()}>Registrarme</button>
                         <button class="btn-general btn-secundario">Nuestras Categorías</button>
                     </div>
                 </div>
@@ -38,7 +45,10 @@ export class BannerView extends LitElement {
                 <span class="blur-gradient"></span>
             </section>
         `;
-    };
+    }
 
+    requestRegistration() {
+        this.dispatchEvent(new CustomEvent('register-request', { bubbles: true, composed: true }));
+    }
 }
 customElements.define('banner-view', BannerView);

@@ -13,6 +13,8 @@ import innerStyles from './home-page.css?inline';
 /* --- VIEWS --- */
 import '../../views/banner-view/banner-view.js';
 import '../../views/footer-view/footer-view.js';
+import '../../views/registration-form-view/registration-form-view.js';
+import '../../views/event-info-view/event-info-view.js';
 /* --- VIEWS --- */
 
 /* --- COMPONENTS --- */
@@ -51,14 +53,20 @@ export class HomePage extends LitElement {
         css`${unsafeCSS(innerStyles)}`,
     ];
 
+    scrollToRegistration() {
+        this.renderRoot.querySelector('registration-form-view')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     render() {
         return html`
             <main class="home-page-container general-container">
-                <nav-component></nav-component>
-                <banner-view></banner-view>
+                <nav-component @register-request=${this.scrollToRegistration}></nav-component>
+                <banner-view @register-request=${this.scrollToRegistration}></banner-view>
                 <counter-component></counter-component>
+                <event-info-view></event-info-view>
                 <rutas-component></rutas-component>
                 <data-component></data-component>
+                <registration-form-view></registration-form-view>
                 
                 <footer-view></footer-view>
 

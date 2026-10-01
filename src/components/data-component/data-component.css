@@ -1,6 +1,6 @@
 .data-container{
     width: 100%;
-    height: 320px;
+    min-height: 260px;
     gap: var(--Pad16);
 }
     .iconic-data{
@@ -9,7 +9,7 @@
         flex-grow: 1;
         text-transform: uppercase;
         gap: var(--Pad16);
-        border-radius: var(--Pad16);
+        border-radius: 0;
         text-align: center;
         color: var(--Blanco);
     }
@@ -26,7 +26,7 @@
         background-color: var(--V400);
         color: var(--Blanco);
     }
-        .iconic-data > svg {
+        .iconic-data > svg, .iconic-data > span {
             width: 70px;
             height: auto;
             aspect-ratio: 1/1;
@@ -35,3 +35,4 @@
         .iconic-data > p {
             font-size: 20px;
         }
+@media (max-width: 700px) { .data-container { flex-wrap: wrap; height: auto; } .iconic-data { width: calc(50% - 8px); min-height: 180px; } }

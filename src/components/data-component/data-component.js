@@ -1,6 +1,7 @@
 import { LitElement, css, html } from "lit";
 import { unsafeCSS } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
+import { createElement, Route, Users, Clock3, MapPin } from 'lucide';
 
 /* --- STYLES --- */
 import generalStyles from '../../styles/globalStyles.css?inline';
@@ -18,23 +19,30 @@ export class DataComponent extends LitElement {
         css`${unsafeCSS(innerStyles)}`,
     ];
 
+    firstUpdated() {
+        this.renderRoot.querySelectorAll('[data-lucide]').forEach((element) => {
+            const icon = { route: Route, users: Users, clock: Clock3, pin: MapPin }[element.dataset.lucide];
+            if (icon) element.replaceWith(createElement(icon));
+        });
+    }
+
     render() {
         return html`
             <section class="data-container general-container d-flexx d-row">
                 <div class="iconic-data d-flexx d-col verde03">
-                    ${unsafeHTML(icons.route)}
+                    <span data-lucide="route" aria-hidden="true"></span>
                     <p class="cpm-carrera-font">5k y 10k</p>
                 </div>
                 <div class="iconic-data d-flexx d-col verde01">
-                    ${unsafeHTML(icons.racer)}
+                    <span data-lucide="users" aria-hidden="true"></span>
                     <p class="cpm-carrera-font">1300 <br>corredores</p>
                 </div>
                 <div class="iconic-data d-flexx d-col verde04">
-                    ${unsafeHTML(icons.clock)}
+                    <span data-lucide="clock" aria-hidden="true"></span>
                     <p class="cpm-carrera-font">07:00 A.M.</p>
                 </div>
                 <div class="iconic-data d-flexx d-col verde02">
-                    ${unsafeHTML(icons.pin)}
+                    <span data-lucide="pin" aria-hidden="true"></span>
                     <p class="cpm-carrera-font">Alameda de León, <br>Av. Independencia S/N</p>
                 </div>
             </section>
