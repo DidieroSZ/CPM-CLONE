@@ -1,70 +1,49 @@
 import { LitElement, css, html } from "lit";
-import { unsafeCSS } from 'lit';
-import { unsafeHTML } from 'lit/directives/unsafe-html.js';
+import { unsafeCSS } from "lit";
+import generalStyles from "../../styles/globalStyles.css?inline";
+import pageStyles from "./home-page.css?inline";
+import logo from "../../assets/CPM/cpm-logo.png";
+import heroImage from "../../assets/CPM/slider.jpg";
+import shirtImage from "../../assets/CPM/playera.jpg";
+import medalImage from "../../assets/CPM/medalla.jpg";
+import route5k from "../../assets/CPM/ruta.jpg";
+import route10k from "../../assets/CPM/ruta2.jpg";
+import racePhoto from "../../assets/CPM/826154517_1766667125465051_4089655458283365747_n.jpg";
 
-/* --- STYLES --- */
-import generalStyles from '../../styles/globalStyles.css?inline';
-import innerStyles from './home-page.css?inline';
-/* --- STYLES --- */
-
-/* --- SERVICES --- */
-/* --- SERVICES --- */
-
-/* --- VIEWS --- */
-import '../../views/banner-view/banner-view.js';
-import '../../views/footer-view/footer-view.js';
-/* --- VIEWS --- */
-
-/* --- COMPONENTS --- */
-import '../../components/nav-component/nav-component.js';
-import '../../components/counter-component/counter-component.js';
-import '../../components/data-component/data-component.js';
-import '../../components/rutas-component/rutas-component.js';
-/* --- COMPONENTS --- */
-
-/* --- ICONS --- */
-/* import { icons } from '../../utils/icons.js' */
-/* --- ICONS --- */
-
-/* --- GSAP --- */
-/* import { gsap } from "gsap";
-import { SplitText } from "gsap/SplitText"; */
-/* --- GSAP --- */
-
-/**
- * An example element.
- *
- * @slot - This element has a slot
- * @csspart button - The button
- */
 export class HomePage extends LitElement {
-    static properties = {
-
-    };
-
-    constructor() {
-        super();
-    };
-
-    static styles = [
-        css`${unsafeCSS(generalStyles)}`,
-        css`${unsafeCSS(innerStyles)}`,
-    ];
-
-    render() {
-        return html`
-            <main class="home-page-container general-container">
-                <nav-component></nav-component>
-                <banner-view></banner-view>
-                <counter-component></counter-component>
-                <rutas-component></rutas-component>
-                <data-component></data-component>
-                
-                <footer-view></footer-view>
-
-            </main>
-        `;
-    };
-
+  static properties = { selectedRoute: { state: true }, timeRemaining: { state: true } };
+  constructor() { super(); this.selectedRoute = "5K"; this.timeRemaining = { days: 0, hours: 0, minutes: 0, seconds: 0 }; this.targetDate = new Date("2026-10-04T07:00:00-06:00"); }
+  static styles = [css`${unsafeCSS(generalStyles)}`, css`${unsafeCSS(pageStyles)}`];
+  connectedCallback() { super.connectedCallback(); this.tick(); this.timer = window.setInterval(() => this.tick(), 1000); }
+  disconnectedCallback() { super.disconnectedCallback(); window.clearInterval(this.timer); this.observer?.disconnect(); }
+  firstUpdated() { this.observer = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add("is-visible")), { threshold: 0.12 }); this.renderRoot.querySelectorAll(".reveal").forEach((element) => this.observer.observe(element)); }
+  tick() { const difference = Math.max(0, this.targetDate - new Date()); const totalSeconds = Math.floor(difference / 1000); this.timeRemaining = { days: Math.floor(totalSeconds / 86400), hours: Math.floor((totalSeconds % 86400) / 3600), minutes: Math.floor((totalSeconds % 3600) / 60), seconds: totalSeconds % 60 }; }
+  format(value) { return String(value).padStart(2, "0"); }
+  scrollTo(id) { this.renderRoot.querySelector(`#${id}`)?.scrollIntoView({ behavior: "smooth" }); }
+  render() {
+    const t = this.timeRemaining; const is5k = this.selectedRoute === "5K";
+    return html`
+      <div class="site-shell">
+        <header class="topbar">
+          <a class="brand" href="#inicio"><img src="${logo}" alt="Caja Popular Mexicana" /><span><b>CARRERA CPM</b><small>75 años transformando vidas</small></span></a>
+          <nav class="desktop-nav"><a href="#evento">El evento</a><a href="#rutas">Rutas</a><a href="#kit">Kit</a><a href="#premiacion">Premiación</a></nav>
+          <a class="button button-lime nav-cta" href="#registro">Regístrate <span>↗</span></a>
+          <button class="mobile-menu" aria-label="Abrir menú" @click=${() => this.renderRoot.querySelector(".mobile-nav").classList.toggle("open")}>☰</button>
+        </header>
+        <nav class="mobile-nav"><a href="#evento">El evento</a><a href="#rutas">Rutas</a><a href="#kit">Kit</a><a href="#premiacion">Premiación</a><a href="#registro">Registro</a></nav>
+        <main>
+          <section class="hero" id="inicio"><div class="hero-bg" style=${`--hero-image:url(${heroImage})`}></div><div class="hero-noise"></div><div class="hero-content reveal"><p class="eyebrow">OAXACA · DOMINGO 04 OCTUBRE 2026</p><h1>Corre por<br /><em>algo grande.</em></h1><p class="hero-copy">La carrera CPM celebra 75 años de historias que transforman. Elige tu distancia, encuentra tu ritmo y corre con nosotros.</p><div class="hero-actions"><a class="button button-lime" href="#registro">Quiero correr <span>↗</span></a><a class="text-link" href="#rutas">Conoce las rutas <span>↓</span></a></div></div><div class="hero-sticker">75<small>AÑOS<br />CPM</small></div><div class="hero-bottom"><span>01 / 06</span><span class="line"></span><span>#YOCORRIMIHISTORIACPM</span></div></section>
+          <section class="intro section-pad" id="evento"><div class="section-heading reveal"><p class="eyebrow green">LA CITA</p><h2>Una ciudad.<br /><span>Dos distancias.</span><br />Miles de historias.</h2></div><div class="intro-copy reveal"><p>Prepárate para vivir una mañana que se siente en comunidad. Salimos frente a la Alameda de León y recorremos Oaxaca con la energía de quienes saben que cada kilómetro cuenta.</p><a class="arrow-link" href="#registro">Aparta tu lugar <span>↗</span></a></div><div class="event-cards reveal"><article><span class="card-index">01</span><strong>04.10.26</strong><small>Domingo · 7:00 AM</small></article><article><span class="card-index">02</span><strong>1,300</strong><small>Corredores con causa</small></article><article><span class="card-index">03</span><strong>5K + 10K</strong><small>Libre femenil y varonil · +18</small></article></div></section>
+          <section class="countdown-section reveal"><div><p class="eyebrow lime">FALTA POCO</p><h2>Nos vemos en la salida.</h2></div><div class="countdown">${[[t.days, "días"], [t.hours, "hrs"], [t.minutes, "min"], [t.seconds, "seg"]].map(([value, label]) => html`<div><strong>${this.format(value)}</strong><span>${label}</span></div>`)}</div></section>
+          <section class="routes section-pad" id="rutas"><div class="section-heading reveal"><p class="eyebrow green">ELIGE TU RETO</p><h2>Tu ritmo.<br /><span>Tu ruta.</span></h2><p class="muted">Dos recorridos por el corazón de Oaxaca. Diseñados para disfrutar cada paso.</p></div><div class="route-layout reveal"><div class="route-tabs"><button class=${is5k ? "active" : ""} @click=${() => this.selectedRoute = "5K"}><span>01</span><b>5K</b><small>El primer gran paso</small></button><button class=${!is5k ? "active" : ""} @click=${() => this.selectedRoute = "10K"}><span>02</span><b>10K</b><small>El reto completo</small></button><div class="route-detail"><p>${is5k ? "Ruta de corredor 5K" : "Ruta de corredor 10K"}</p><strong>${is5k ? "Corre tu historia" : "Ve por más"}</strong><small>Salida y meta en Av. Independencia, frente a la Alameda de León.</small></div></div><figure class="route-image"><img src=${is5k ? route5k : route10k} alt="Mapa de la ruta ${this.selectedRoute}" /><figcaption>OAXACA · ${this.selectedRoute} · 2026</figcaption></figure></div></section>
+          <section class="dark-story"><div class="story-photo reveal"><img src=${racePhoto} alt="Corredores en la Carrera CPM" /></div><div class="story-copy reveal"><p class="eyebrow lime">MÁS QUE UNA CARRERA</p><h2>Cada kilómetro<br /><span>transforma vidas.</span></h2><p>La Carrera CPM es una invitación a movernos juntos. Una celebración de 75 años construyendo bienestar, comunidad y nuevas historias.</p><a class="button button-outline" href="#registro">Sé parte de esto <span>↗</span></a></div></section>
+          <section class="kit section-pad" id="kit"><div class="kit-copy reveal"><p class="eyebrow green">LO QUE TE LLEVAS</p><h2>Corre con<br /><span>tu historia puesta.</span></h2><p>Tu inscripción incluye todo lo necesario para vivir la experiencia CPM de principio a fin.</p><div class="benefits"><span>01 <b>Playera conmemorativa</b></span><span>02 <b>Número + chip</b></span><span>03 <b>Medalla de participación</b></span><span>04 <b>Certificado digital</b></span></div></div><div class="kit-visual reveal"><img class="shirt" src=${shirtImage} alt="Playera oficial Carrera CPM" /><img class="medal" src=${medalImage} alt="Medalla oficial Carrera CPM" /></div></section>
+          <section class="registration" id="registro"><div class="section-heading reveal"><p class="eyebrow lime">INSCRIPCIONES</p><h2>Tu lugar empieza<br /><span>con un sí.</span></h2><p>Participa como socio o no socio. Revisa las bases y registra tu folio en sucursal participante.</p></div><div class="steps reveal"><article><span>01</span><h3>Cumple las bases</h3><p>Socios: ahorro mínimo de $500 o crédito desde $20,000. No socios: apertura tu cuenta con $100 o paga tu inscripción.</p></article><article><span>02</span><h3>Recibe tu folio</h3><p>Acércate a una sucursal participante con el gerente o subgerente para obtener tu folio de registro.</p></article><article><span>03</span><h3>Regístrate y corre</h3><p>Completa tu inscripción, recoge tu kit y prepárate para el domingo 04 de octubre.</p></article></div><a class="button button-lime register-button" href="mailto:registro@cpm.coop">Quiero registrarme <span>↗</span></a></section>
+          <section class="prizes section-pad" id="premiacion"><div class="prize-intro reveal"><p class="eyebrow green">PREMIACIÓN</p><h2>Corre por<br /><span>la gloria.</span></h2><p>Premiación para los tres primeros lugares de cada rama y distancia.</p></div><div class="prize-grid reveal"><article><span>10K · 1er lugar</span><strong>$4,000</strong><small>Monedero electrónico</small></article><article><span>10K · 2do lugar</span><strong>$2,000</strong><small>Monedero electrónico</small></article><article><span>5K · 1er lugar</span><strong>$2,000</strong><small>Monedero electrónico</small></article><article><span>5K · 3er lugar</span><strong>$500</strong><small>Monedero electrónico</small></article></div></section>
+          <section class="faq section-pad"><div class="section-heading reveal"><p class="eyebrow green">PREGUNTAS FRECUENTES</p><h2>Todo claro.<br /><span>Todo listo.</span></h2></div><div class="faq-list reveal"><details open><summary>¿Dónde es la salida y la meta?</summary><p>En Av. Independencia S/N, a un costado de la Alameda de León, Oaxaca de Juárez.</p></details><details><summary>¿Quién puede participar?</summary><p>Socios y personas interesadas mayores de 18 años que cumplan las bases de participación.</p></details><details><summary>¿Qué incluye mi kit?</summary><p>Playera conmemorativa, número de corredor, chip, medalla, certificado digital e hidratación en ruta.</p></details><details><summary>¿Cuándo entregan el kit?</summary><p>Viernes 2 de octubre de 10:00 a 16:00 y sábado 3 de octubre de 10:00 a 13:00, en las oficinas de Plaza Oaxaca.</p></details></div></section>
+        </main>
+        <footer><div class="footer-top"><img src=${logo} alt="Caja Popular Mexicana" /><div><p class="eyebrow lime">NOS VEMOS EN LA META</p><h2>Corre tu historia.</h2></div><a class="button button-lime" href="#inicio">Volver arriba ↑</a></div><div class="footer-bottom"><span>© 2026 Caja Popular Mexicana</span><span>75 años transformando vidas · Oaxaca</span></div></footer>
+      </div>`;
+  }
 }
-customElements.define('home-page', HomePage);
+customElements.define("home-page", HomePage);
