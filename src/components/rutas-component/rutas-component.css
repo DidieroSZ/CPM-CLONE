@@ -1,0 +1,58 @@
+.rutas-container{
+    height: 800px;
+    background-color: var(--Blanco);
+    padding: var(--Pad32);
+    gap: var(--Pad16);
+}
+    .rutas-text-side{
+        width: 30%;
+        height: 100%;
+    }
+        .title-rutas{
+            width: 100%;
+            text-transform: uppercase;
+        }
+            .title-rutas > p{
+                color: var(--V300);
+
+            }
+            .title-rutas > h3 {
+                font-weight: 400;
+                font-size: 40px;
+            }
+        .rutas-selector{
+            gap: var(--Pad16);
+        }
+            .ruta-op{
+                width: 100%;
+                height: auto;
+                min-height: 160px;
+                background-color: var(--Gris);
+                padding: var(--Pad16);
+                border: 2px var(--N300) solid;
+                cursor: pointer;
+            }
+                .ruta-op > h3{
+                    font-weight: 400;
+                    font-size: 60px;
+                }
+                .ruta-op > p{
+                    margin-block: var(--Pad8);
+                    font-weight: bold;
+                    color: var(--V300);
+                }
+                .ruta-op > small{
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+    .rutas-img-side{
+        width: 550px;
+        height: 100%;
+        overflow: hidden;
+    }
+        .rutas-img-side img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }

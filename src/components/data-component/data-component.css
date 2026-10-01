@@ -1,0 +1,37 @@
+.data-container{
+    width: 100%;
+    height: 320px;
+    gap: var(--Pad16);
+}
+    .iconic-data{
+        width: 20%;
+        height: 100%;
+        flex-grow: 1;
+        text-transform: uppercase;
+        gap: var(--Pad16);
+        border-radius: var(--Pad16);
+        text-align: center;
+        color: var(--Blanco);
+    }
+    .verde01{
+        background-color: var(--V100);
+    }
+    .verde02{
+        background-color: var(--V200);
+    }
+    .verde03{
+        background-color: var(--V300);
+    }
+    .verde04{
+        background-color: var(--V400);
+        color: var(--Blanco);
+    }
+        .iconic-data > svg {
+            width: 70px;
+            height: auto;
+            aspect-ratio: 1/1;
+            stroke: var(--Blanco);
+        }
+        .iconic-data > p {
+            font-size: 20px;
+        }

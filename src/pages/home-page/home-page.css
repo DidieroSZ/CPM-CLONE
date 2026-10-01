@@ -1,0 +1,12 @@
+.home-page-container{
+    height: auto;
+    min-height: 100vh;
+    padding: var(--Pad16);
+    gap: var(--Pad16);
+    margin: 0;
+}
+nav-component{
+    position: relative;
+    z-index: 3;
+}
+
