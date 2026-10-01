@@ -1,153 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fugaz+One&family=Kedebideri:wght@400;500;600;700;800;900&display=swap');
 
-
-:root {
-    --N300: #111111;
-    --N200: #1d1c20;
-    --N100: #2f2e32;
-    --N150: #3e3b44;
-
-    --V400: #015716; 
-    --V300: #008131; 
-    --V200: #4daa37; 
-    --V100: #b7d100;
-
-    --Blanco: #fff;
-    --Gris: #f4f4f2;
-
-    --Pad8: 8px;
-    --Pad16: 16px;
-    --Pad32: 32px;
+:root { 
+    --N300:#111;
+    --N200:#1d1c20; 
+    --N100:#2f2e32; 
+    --V400:#015716; 
+    --V300:#008131; 
+    --V200:#4daa37; 
+    --V100:#b7d100; 
+    --Blanco:#fff; 
+    --Gris:#f4f4f2; 
+    --Pad8:8px; 
+    --Pad16:16px; 
+    --Pad32:32px; 
 }
+* { 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+} 
+html { 
+    scroll-behavior:smooth; 
+} 
+body { 
+    margin:0; 
+    font-family:'Kedebideri',sans-serif; 
+    font-size:16px; 
+    background:#f5f7f1; 
+} 
 
-/* :root[data-theme="dark"] {
-    --Blanco: #1f1e22; 
-    --Gris: #0e0e10;
-    --Negro: #FFF;
-    --Naranja: rgba(246, 133, 12, 0.129);
-    --Naranja2: #F6850C;
-    --BorderColor: #37363e;
-} */
-
-/* ::view-transition-old(root) {
-    animation: none;
-    z-index: -1;
-}
-
-::view-transition-new(root) {
-    -webkit-mask:
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs></defs><circle cx="0" cy="0" r="18" fill="white"/></svg>')
-        top left / 0 no-repeat;
-    mask:
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs></defs><circle cx="0" cy="0" r="18" fill="white"/></svg>')
-        top left / 0 no-repeat;
-    -webkit-mask-origin: content-box;
-    mask-origin: content-box;
-    animation: reveal 800ms ease-out forwards;
-} */
-
-/* @keyframes reveal {
-    to {
-        -webkit-mask-size: 250vmax;
-        mask-size: 250vmax;
-    }
-} */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: "Kedebideri", sans-serif;
-    font-style: normal;
-    font-size: var(--Pad16);
-    
-}
-
-/** FONTS */
-.cpm-font{
-    font-family: "Alfa Slab One", serif;
-
-   
-}
-.text-font{
-    font-family: "Kedebideri", sans-serif;
-  
-}
-.cpm-carrera-font{
-    font-family: "Fugaz One", sans-serif;
-
-}
-/** FONTS */
-
-
-/** GENERAL STYLES */
-.d-flexx{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.d-col{
-    flex-direction: column;
-}
-.d-row{
-    flex-direction: row;
-}
-
-.image-styled{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.trans{
-    transition: all ease-out 0.4s;
-}
-
-.general-container{
-    width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: var(--Pad16);
-}
-/** GENERAL STYLES */
-
-
-/** BOTONES */
-.btn-general{
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    border: none;
-    border-radius: var(--Pad32);
-    padding: var(--Pad8) var(--Pad16);
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn-cta{
-    background-color: var(--V300);
-    color: var(--Blanco);
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.btn-white{
-    background-color: var(--Blanco);
-    color: var(--N200);
-}
-.btn-secundario{
-    /* background-color: rgba(0, 0, 0, 0.350); */
-    background-color: var(--V300);
-    backdrop-filter: blur(5px);
-    color: var(--Blanco);
-}
-/** BOTONES */
-
-
-@media (max-width: 900px) {
-    .container-styled{
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-    }
+button,input { 
+    font:inherit; 
 }
