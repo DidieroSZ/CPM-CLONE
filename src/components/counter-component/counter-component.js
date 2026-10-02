@@ -7,9 +7,6 @@ import generalStyles from '../../styles/globalStyles.css?inline';
 import innerStyles from './counter-component.css?inline';
 /* --- STYLES --- */
 
-/* --- ICONS --- */
-import { icons } from '../../utils/icons.js'
-/* --- ICONS --- */
 
 export class CounterComponent extends LitElement {
 
@@ -100,37 +97,34 @@ export class CounterComponent extends LitElement {
         } = this.timeRemaining;
 
         return html`
-            <section class="counter-container general-container d-flexx d-row">
+            <section class="counter-container d-flexx">
+                <div class="page-shell d-flexx d-row">
+                    <article class="counter-text-side">
+                        <p class="eyebrow"><span></span> La cuenta regresiva</p>
+                        <h2>Nos vemos en la salida.</h2>
+                    </article>
 
-                <article class="counter-text-side">
-                    <p class="cpm-carrera-font">Corre por algo más grande</p>
-
-                    <h3 class="cpm-font">Cada kilómetro<br>transforma vidas.</h3>
-                </article>
-
-                <aside class="counter-numbers-side d-flexx d-col">
-                    <p class="counter-pill-date cpm-carrera-font d-flexx">04.10.2026 ${unsafeHTML(icons.arrow)}Faltan para la salida</p>
-
-                    <div class="counter d-flexx d-row">
-                        <span class="container-number">
-                            <p class="cpm-carrera-font">${this.formatNumber(days)}</p>
-                            <small>DÍAS</small>
-                        </span>
-                        <span class="container-number">
-                            <p class="cpm-carrera-font">${this.formatNumber(hours)}</p>
-                            <small>HRS</small>
-                        </span>
-                        <span class="container-number">
-                            <p class="cpm-carrera-font">${this.formatNumber(minutes)}</p>
-                            <small>MINS</small>
-                        </span>
-                        <span class="container-number">
-                            <p class="cpm-carrera-font"> ${this.formatNumber(seconds)}</p>
-                            <small>SEGS</small>
-                        </span>
-                    </div>
-
-                </aside>
+                    <aside class="counter-numbers-side d-flexx d-col">
+                        <div class="counter d-flexx d-row">
+                            <span class="container-number">
+                                <p class="cpm-carrera-font">${this.formatNumber(days)}</p>
+                                <small>DÍAS</small>
+                            </span>
+                            <span class="container-number">
+                                <p class="cpm-carrera-font">${this.formatNumber(hours)}</p>
+                                <small>HRS</small>
+                            </span>
+                            <span class="container-number">
+                                <p class="cpm-carrera-font">${this.formatNumber(minutes)}</p>
+                                <small>MINS</small>
+                            </span>
+                            <span class="container-number">
+                                <p class="cpm-carrera-font"> ${this.formatNumber(seconds)}</p>
+                                <small>SEGS</small>
+                            </span>
+                        </div>
+                    </aside>
+                </div>
             </section>
         `;
     };

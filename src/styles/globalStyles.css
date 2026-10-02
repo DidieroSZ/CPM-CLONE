@@ -4,16 +4,24 @@
     --N300:#111;
     --N200:#1d1c20; 
     --N100:#2f2e32; 
-    --V400:#015716; 
+
+    --V400:#003b2d; 
     --V300:#008131; 
     --V200:#4daa37; 
-    --V100:#b7d100; 
+    --V100:#c7e600; 
+
     --Blanco:#fff; 
+    --B100:rgba(255, 255, 255, .78);
     --Gris:#f4f4f2; 
+    --Paper:#f5f7f1; 
+
+    
     --Pad8:8px; 
     --Pad16:16px; 
     --Pad32:32px; 
 }
+
+
 * { 
     margin:0; 
     padding:0; 
@@ -26,9 +34,105 @@ body {
     margin:0; 
     font-family:'Kedebideri',sans-serif; 
     font-size:16px; 
-    background:#f5f7f1; 
+    background:var(--Paper); 
 } 
 
+/** FONTS  */
+
+/** FONTS  */
+
+/** GENERAL STYLES  */
+.d-flexx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.d-row{
+    flex-direction: row;
+}
+.d-col{
+    flex-direction: column;
+}
+.page-shell {
+    width: min(1180px, calc(100% - 96px));
+    margin: 0 auto;
+}
+/** GENERAL STYLES  */
+
+
+/** BUTTONS */
 button,input { 
     font:inherit; 
 }
+.button-V100 {
+    color: var(--ink);
+    background: var(--V100);
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--Pad8);
+    border-radius: var(--Pad32);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: .08em;
+    transition: transform .25s, background .25s;
+    cursor: pointer;
+    background-color: var(--V100);
+    color: var(--N300);
+}
+    .button:hover {
+        transform: translateY(-3px);
+    }
+    .button svg,
+    .text-link svg {
+        width: 15px;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+.button-secundario {
+    background-color: var(--Blanco);
+    color: var(--N300);
+}
+/** BUTTONS */
+
+
+/** CUMMON STYLES  */
+.hero h1, h2 {
+    font-family: 'Alfa Slab One', serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: -.025em;
+}
+.hero h1 {
+    font-size: clamp(3.4rem, 7vw, 6.5rem);
+    max-width: 750px;
+}
+.hero h1 em, h2 em {
+    color: var(--lime);
+    font-style: normal;
+}
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .22em;
+    font-weight: 800;
+    color: var(--V100);
+    margin-bottom: var(--Pad8);
+}
+    .eyebrow span {
+        display: inline-block;
+        width: 23px;
+        border-top: 2px solid currentColor;
+        vertical-align: middle;
+        margin-right: var(--Pad8);
+    }
+.eyebrow-next {
+    color: var(--V400);
+}
+/** CUMMON STYLES  */
