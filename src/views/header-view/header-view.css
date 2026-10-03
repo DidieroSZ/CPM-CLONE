@@ -74,9 +74,8 @@
     .hero-art {
         position: absolute;
         right: var(--Pad32);
-        /* bottom: calc(var(--Pad32) * 2); */
         bottom: 0;
-        color: rgba(199, 230, 0, .28);
+        color: rgba(199, 230, 0, .35);
         font-family: 'Alfa Slab One';
         line-height: .75;
         transform: rotate(-10deg);

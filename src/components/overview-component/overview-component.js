@@ -1,6 +1,5 @@
 import { LitElement, css, html } from "lit";
 import { unsafeCSS } from 'lit';
-import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 /* --- STYLES --- */
 import generalStyles from '../../styles/globalStyles.css?inline';
@@ -9,6 +8,7 @@ import innerStyles from './overview-component.css?inline';
 
 /* --- ICONS --- */
 import { hydrateIcons } from '../../utils/icons.js';
+import { animatePage } from '../../utils/animations.js';
 /* --- ICONS --- */
 
 export class OverviewComponent extends LitElement {
@@ -18,8 +18,14 @@ export class OverviewComponent extends LitElement {
         css`${unsafeCSS(innerStyles)}`,
     ];
 
+    disconnectedCallback() { 
+        this._cleanup?.(); 
+        super.disconnectedCallback(); 
+    }
+
     firstUpdated() { 
         hydrateIcons(this.renderRoot); 
+        this._cleanup = animatePage(this.renderRoot); 
     }
 
     updated() { 

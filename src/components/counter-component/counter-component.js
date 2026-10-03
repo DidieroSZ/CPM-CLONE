@@ -1,6 +1,5 @@
 import { LitElement, css, html } from "lit";
 import { unsafeCSS } from 'lit';
-import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 /* --- STYLES --- */
 import generalStyles from '../../styles/globalStyles.css?inline';
@@ -98,7 +97,7 @@ export class CounterComponent extends LitElement {
 
         return html`
             <section class="counter-container d-flexx">
-                <div class="page-shell d-flexx d-row">
+                <div class="page-shell d-flexx d-row" data-stagger>
                     <article class="counter-text-side">
                         <p class="eyebrow"><span></span> La cuenta regresiva</p>
                         <h2>Nos vemos en la salida.</h2>

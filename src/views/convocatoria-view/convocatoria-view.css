@@ -1,0 +1,78 @@
+.convocatoria-container{
+    background-color: var(--Paper);
+    width: 100%;
+    height: auto;
+    min-height: 1000px;
+    overflow: hidden;
+    position: relative;
+    padding-block: var(--Pad32);
+}
+
+    .top-text-container{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: var(--Pad16);
+    }
+        .top-text-container > h2{
+            font-size: clamp(2.7rem, 5vw, 5.4rem);
+            font-family: 'Alfa Slab One', serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            line-height: .98;
+            letter-spacing: -.025em;
+        }
+
+.card-container {
+    gap: var(--Pad16);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+    .card-cpm{
+        width: 100%;
+        padding: var(--Pad32);
+        border-top: 4px solid var(--V100);
+        background-color: var(--N300);
+        color: var(--Blanco);
+    }
+        .card-cpm > *{
+            width: 100%;
+            display: block;
+        }
+        .card-cpm > small{
+            font-size: 16px;
+            vertical-align: middle;
+            margin-bottom: var(--Pad16);
+        }
+        .card-cpm > p{
+            font-size: 25px;
+            margin-bottom: var(--Pad16);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+            .content-card{
+                display: flex;
+                gap: var(--Pad16);
+                height: auto;
+                justify-content: start;
+                align-items: start;
+            }
+            .content-card > p{
+                /* line-height: 1.5; */
+            }
+                .content-card > p > small{
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    color: var(--V300);
+                }
+            .content-card > ul, ol{
+                list-style-position: inside;
+                margin: 0;
+                padding-left: 5px;
+            }
+            .content-card li{
+                line-height: 1.5;
+                margin-bottom: var(--Pad8);
+            }
