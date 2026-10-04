@@ -85,7 +85,7 @@ export class ConvocatoriaView extends LitElement {
 
                         <div class="card-cpm">
                             <small>03</small>
-                            <p>BASES PARA NO SOCIOS</p>
+                            <p>BASES PARA PÚBLICO</p>
                             <span class="content-card d-flexx d-col">
                                 <p>Puedes participar de dos formas:</p>
                                 <ul>
