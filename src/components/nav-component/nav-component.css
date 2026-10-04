@@ -1,56 +1,63 @@
-.nav-container{
-    width: calc(100% - var(--Pad32));
-    height: auto;
-    
-    padding: var(--Pad16);
-    border-radius: var(--Pad16);
-    
-    background-color: var(--N300);
-    color: var(--Blanco);
+.site-header, .site-nav-container{
+    position: fixed;
+    z-index: 10;
+    top: var(--Pad16);
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(1180px, calc(100% - 96px));
+    border-radius: var(--Pad32);
+    padding: var(--Pad8) var(--Pad16);
 
     justify-content: space-between;
 
-    margin-top: var(--Pad16);
-    position: fixed;
-    transform: translateX(-50%);
-    top: 0;
-    left: 50%;
+    color: var(--Blanco);
+    background-color: rgba(0, 59, 45, 0.700);
+    backdrop-filter: blur(10px);
+    border: solid 1px var(--V400);
 }
-    .item-nav{
-        width: auto;
-        height: 50px;
-        text-transform: uppercase;
+    .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        color: inherit;
         text-decoration: none;
+        font-size: 11px;
+        letter-spacing: .09em;
+        line-height: 1.2;
     }
-    .logo-nav-container{
-        gap: var(--Pad8);
-    }
-        .logo-nav-container > figure{
-            width: 50px;
-            height: auto;
-            aspect-ratio: 1/1;
-            overflow: hidden;
+        .brand img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
         }
-            .logo-nav-container img{
-                width: 100%;
-                height: 100%;
-                aspect-ratio: 1/1;
-                object-fit: contain;
-                object-position: center;
+        .brand strong {
+            display: block;
+            color: var(--V100);
+            font-size: 10px;
+            letter-spacing: .18em;
+        }
+
+    .desktop-nav {
+        gap: 20px;
+    }
+        .desktop-nav a,
+        .text-link {
+            color: inherit;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: .1em;
+        }
+            .desktop-nav a:hover,
+            .text-link:hover {
+                color: var(--V100);
             }
-        .logo-nav-container > span{
-            
+
+    .menu-link {
+        display: none;
+        color: var(--Blanco);
+    }
+        .menu-link svg {
+            width: 22px;
         }
-    .logo-nav-container > small{
-        font-size: 12px;
-        line-height: 1cap;
-    }
-    .links-nav-container{
-        text-decoration: none;
-        list-style: none;
-        gap: var(--Pad32);
-    }
-    .item-nav > button{
-        height: 100%;
-        border-radius: var(--Pad8);
-    }

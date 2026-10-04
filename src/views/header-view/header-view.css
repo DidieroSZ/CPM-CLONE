@@ -1,0 +1,97 @@
+.hero {
+    min-height: 95vh;
+    position: relative;
+    isolation: isolate;
+    background: var(--V400) var(--hero-bg) top/cover no-repeat;
+    color: var(--Blanco);
+    padding: var(--Pad32);
+    align-items: end;
+}
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(0, 35, 22, .82), rgba(0, 54, 26, .12) 70%), linear-gradient(0deg, rgba(0, 28, 17, .45), transparent 65%);
+        z-index: -1;
+    }
+    .hero-copy {
+        height: fit-content;
+        position: relative;
+        z-index: 2;
+        align-items: start;
+        gap: var(--Pad8);
+    }
+        .eyebrow {
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: .22em;
+            font-weight: 800;
+            color: var(--V400);
+            color: var(--V100);
+        }
+            .eyebrow span {
+                display: inline-block;
+                width: 23px;
+                border-top: 2px solid currentColor;
+                vertical-align: middle;
+                margin-right: 9px;
+            }
+
+    .hero-description {
+        width: 430px;
+        color: var(--B100);
+    }
+
+    .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-block: var(--Pad16);
+    }
+        .hero-actions a {
+            gap: var(--Pad16);
+        }
+
+    .hero-meta {
+        width: 430px;
+        gap: var(--Pad32);
+        padding-top: var(--Pad16);
+        border-top: 1px solid var(--B100);
+        justify-content: start;
+    }
+        .hero-meta span {
+            color: rgba(255, 255, 255, .58);
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: .13em;
+        }
+            .hero-meta b {
+                display: block;
+                color: var(--Blanco);
+                font-size: var(--Pad16);
+                margin-bottom: 6px
+            }
+
+    .hero-art {
+        position: absolute;
+        right: var(--Pad32);
+        bottom: 0;
+        color: rgba(199, 230, 0, .35);
+        font-family: 'Alfa Slab One';
+        line-height: .75;
+        transform: rotate(-10deg);
+        text-transform: uppercase;
+    }
+        .art-number {
+            font-size: clamp(13rem, 30vw, 30rem)
+        }
+        .art-label {
+            position: absolute;
+            right: 10%;
+            bottom: 20%;
+            color: var(--V100);
+            font-family: 'Kedebideri';
+            font-weight: 800;
+            letter-spacing: .18em;
+            font-size: var(--Pad16);
+            line-height: 1.1;
+        }

@@ -1,56 +1,59 @@
 import { LitElement, css, html } from "lit";
 import { unsafeCSS } from 'lit';
-import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 /* --- STYLES --- */
 import generalStyles from '../../styles/globalStyles.css?inline';
 import innerStyles from './nav-component.css?inline';
 /* --- STYLES --- */
 
-import logo from '../../assets/CPM/cpm-logo.png';
+/* --- ICONS --- */
+import { hydrateIcons } from '../../utils/icons.js';
+import { animatePage } from '../../utils/animations.js';
+/* --- ICONS --- */
 
+/* --- ASSETS --- */
+import logo from '../../assets/CPM/cpm-logo.png';
+/* --- ASSETS --- */
 
 export class NavComponent extends LitElement {
-    static properties = {
-
-    };
-
-    constructor() {
-        super();
-    };
 
     static styles = [
         css`${unsafeCSS(generalStyles)}`,
         css`${unsafeCSS(innerStyles)}`,
     ];
 
+    firstUpdated() { 
+        hydrateIcons(this.renderRoot); 
+    }
+    updated() { 
+        hydrateIcons(this.renderRoot); 
+    }
+        
     render() {
         return html`
-            <nav class="nav-container general-container d-flexx d-row">
-                <div class="item-nav d-flexx d-col logo-nav-container d-flexx d-row">
-                    <figure>
-                        <img src="${logo}" class="logo-cpm" alt="logo CPM">
-                    </figure>
-                    <span>
-                        <p class="cpm-carrera-font">Carrera CPM</p>
-                        <small class="">75 años</small>
-                    </span>
+            <nav class="site-nav-container d-flexx d-row">
+
+                <a class="brand" href="#inicio">
+                    <img src=${logo} alt="Caja Popular Mexicana">
+                    <span>CARRERA CPM<strong>75 AÑOS</strong></span>
+                </a>
+                <div class="desktop-nav d-flexx d-row">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#carrera">La carrera</a>
+                    <a href="#convocatoria">Convocatoria</a>
+                    <a href="#distancias">Distancias</a>
+                    <a href="#kit">Kit de Corredor</a>
+                    <a href="#registro">Registro</a>
+                    <a href="#premiación">Premiación</a>
+                    <a href="#faq">Preguntas</a>
+                </div>
+                <a class="button button-lime header-cta" href="#registro">
+                    Regístrate <i data-lucide="arrow-up-right"></i>
+                </a>
                     
-                </div>
-
-                <ul class="item-nav links-nav-container d-flexx d-row">
-                    <li>Inicio</li>
-                    <li>Reglamento</li>
-                    <li>Categorias</li>
-                    <li>Premiacion</li>
-                    <li>Playera</li>
-                    <li>Medalla</li>
-                    <li>Ruta</li>
-                </ul>
-
-                <div class="item-nav">
-                    <button class="btn-general btn-cta">¡Registrate!</button>
-                </div>
+                <a class="menu-link" href="#registro" aria-label="Ir al registro">
+                    <i data-lucide="menu"></i>
+                </a>
 
             </nav>
         `;

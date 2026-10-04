@@ -1,153 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fugaz+One&family=Kedebideri:wght@400;500;600;700;800;900&display=swap');
 
+:root { 
+    --N300:#111;
+    --N200:#1d1c20; 
+    --N100:#2f2e32; 
 
-:root {
-    --N300: #111111;
-    --N200: #1d1c20;
-    --N100: #2f2e32;
-    --N150: #3e3b44;
+    --V400:#003b2d; 
+    --V300:#008131; 
+    --V200:#4daa37; 
+    --V100:#c7e600; 
 
-    --V400: #015716; 
-    --V300: #008131; 
-    --V200: #4daa37; 
-    --V100: #b7d100;
+    --Blanco:#fff; 
+    --B100:rgba(255, 255, 255, .78);
+    --Gris:#f4f4f2; 
+    --Paper:#f5f7f1; 
 
-    --Blanco: #fff;
-    --Gris: #f4f4f2;
-
-    --Pad8: 8px;
-    --Pad16: 16px;
-    --Pad32: 32px;
-}
-
-/* :root[data-theme="dark"] {
-    --Blanco: #1f1e22; 
-    --Gris: #0e0e10;
-    --Negro: #FFF;
-    --Naranja: rgba(246, 133, 12, 0.129);
-    --Naranja2: #F6850C;
-    --BorderColor: #37363e;
-} */
-
-/* ::view-transition-old(root) {
-    animation: none;
-    z-index: -1;
-}
-
-::view-transition-new(root) {
-    -webkit-mask:
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs></defs><circle cx="0" cy="0" r="18" fill="white"/></svg>')
-        top left / 0 no-repeat;
-    mask:
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs></defs><circle cx="0" cy="0" r="18" fill="white"/></svg>')
-        top left / 0 no-repeat;
-    -webkit-mask-origin: content-box;
-    mask-origin: content-box;
-    animation: reveal 800ms ease-out forwards;
-} */
-
-/* @keyframes reveal {
-    to {
-        -webkit-mask-size: 250vmax;
-        mask-size: 250vmax;
-    }
-} */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: "Kedebideri", sans-serif;
-    font-style: normal;
-    font-size: var(--Pad16);
     
+    --Pad8:8px; 
+    --Pad16:16px; 
+    --Pad32:32px; 
 }
 
-/** FONTS */
-.cpm-font{
-    font-family: "Alfa Slab One", serif;
 
-   
-}
-.text-font{
-    font-family: "Kedebideri", sans-serif;
-  
-}
-.cpm-carrera-font{
-    font-family: "Fugaz One", sans-serif;
+* { 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+} 
+html { 
+    scroll-behavior:smooth; 
+} 
+body { 
+    margin:0; 
+    font-family:'Kedebideri',sans-serif; 
+    font-size:16px; 
+    background:var(--Paper); 
+} 
 
-}
-/** FONTS */
+/** FONTS  */
 
+/** FONTS  */
 
-/** GENERAL STYLES */
+/** GENERAL STYLES  */
 .d-flexx{
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-.d-col{
-    flex-direction: column;
+    justify-content: center;
 }
 .d-row{
     flex-direction: row;
 }
-
-.image-styled{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.d-col{
+    flex-direction: column;
 }
-.trans{
-    transition: all ease-out 0.4s;
+.page-shell {
+    width: min(1180px, calc(100% - 96px));
+    margin: 0 auto;
 }
+/** GENERAL STYLES  */
 
-.general-container{
-    width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: var(--Pad16);
+
+/** BUTTONS */
+button,input { 
+    font:inherit; 
 }
-/** GENERAL STYLES */
-
-
-/** BOTONES */
-.btn-general{
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    border: none;
+.button-V100 {
+    color: var(--ink);
+    background: var(--V100);
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--Pad8);
     border-radius: var(--Pad32);
-    padding: var(--Pad8) var(--Pad16);
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn-cta{
-    background-color: var(--V300);
-    color: var(--Blanco);
+    padding: 14px 20px;
+    text-decoration: none;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: .08em;
+    transition: transform .25s, background .25s;
+    cursor: pointer;
+    background-color: var(--V100);
+    color: var(--N300);
 }
-.btn-white{
-    background-color: var(--Blanco);
-    color: var(--N200);
-}
-.btn-secundario{
-    /* background-color: rgba(0, 0, 0, 0.350); */
-    background-color: var(--V300);
-    backdrop-filter: blur(5px);
-    color: var(--Blanco);
-}
-/** BOTONES */
-
-
-@media (max-width: 900px) {
-    .container-styled{
-        width: 100%;
-        height: auto;
-        max-width: 100%;
+    .button:hover {
+        transform: translateY(-3px);
     }
+    .button svg,
+    .text-link svg {
+        width: 15px;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+.button-secundario {
+    background-color: var(--Blanco);
+    color: var(--N300);
 }
+/** BUTTONS */
+
+
+/** CUMMON STYLES  */
+.hero h1, h2 {
+    font-family: 'Alfa Slab One', serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: -.025em;
+}
+.hero h1 {
+    font-size: clamp(3.4rem, 7vw, 6.5rem);
+    max-width: 750px;
+}
+.hero h1 em, h2 em {
+    color: var(--lime);
+    font-style: normal;
+}
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .22em;
+    font-weight: 800;
+    color: var(--V100);
+    margin-bottom: var(--Pad8);
+}
+    .eyebrow span {
+        display: inline-block;
+        width: 23px;
+        border-top: 2px solid currentColor;
+        vertical-align: middle;
+        margin-right: var(--Pad8);
+    }
+.eyebrow-next {
+    color: var(--V300);
+}
+/** CUMMON STYLES  */
