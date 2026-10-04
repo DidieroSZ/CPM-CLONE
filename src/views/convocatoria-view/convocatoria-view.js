@@ -43,7 +43,7 @@ export class ConvocatoriaView extends LitElement {
 
                     <aside class="card-container">
 
-                        <div class="card-cpm">
+                        <div class="card-cpm type-card-01">
                             <small>01</small>
                             <p>DATOS DEL EVENTO</p>
                             <span class="content-card d-flexx d-col">
@@ -70,7 +70,7 @@ export class ConvocatoriaView extends LitElement {
                             </span>
                         </div>
 
-                        <div class="card-cpm">
+                        <div class="card-cpm type-card-02">
                             <small>02</small>
                             <p>BASES PARA SOCIOS</p>
                             <span class="content-card d-flexx d-col">
@@ -83,7 +83,7 @@ export class ConvocatoriaView extends LitElement {
                             </span>
                         </div>
 
-                        <div class="card-cpm">
+                        <div class="card-cpm type-card-03">
                             <small>03</small>
                             <p>BASES PARA PÚBLICO</p>
                             <span class="content-card d-flexx d-col">
@@ -96,7 +96,7 @@ export class ConvocatoriaView extends LitElement {
                             </span>
                         </div>
 
-                        <div class="card-cpm">
+                        <div class="card-cpm type-card-02">
                             <small>04</small>
                             <p>REGISTRA TU PARTICIPACIÓN</p>
                             <span class="content-card d-flexx d-col">
@@ -115,7 +115,50 @@ export class ConvocatoriaView extends LitElement {
                             </span>
                         </div>
 
-                       
+                        <div class="card-cpm type-card-03">
+                            <small>05</small>
+                            <p>RECOGE TU KIT</p>
+                            <span class="content-card d-flexx d-col">
+                                <p>Para recoger tu kit presenta:</p>
+                                <ul>
+                                    <li>Tu folio y/o número de corredor.</li>
+                                    <li>Una identificación oficial.</li>
+                                </ul>
+                                <p> 
+                                    <small>Fechas de entrega:</small>
+                                </p>
+                                <ul>
+                                    <li>Viernes 02 de octubre: 10:00 a.m. a 4:00 p.m.</li>
+                                    <li>Sábado 03 de octubre: 10:00 a.m. a 1:00 p.m.</li>
+                                </ul>
+                                <p> 
+                                    <small>Lugar:</small> <br>
+                                    Oficinas de Plaza Oaxaca, ubicadas en Calle Armenta y López No. 1028, Planta Alta, Col. Centro, Oaxaca de Juárez, Oaxaca.
+                                </p>
+                            </span>
+                        </div>
+
+                        <div class="card-cpm type-card-01">
+                            <small>06</small>
+                            <p>TU EXPERIENCIA INCLUYE</p>
+                            <span class="content-card d-flexx d-col">
+                                <p>Disfruta de una experiencia completa con:</p>
+                                <ul>
+                                    <li>Playera conmemorativa.</li>
+                                    <li>Número de corredor.</li>
+                                    <li>Chip para cronometraje.</li>
+                                    <li>Medalla.</li>
+                                    <li>Certificado digital de participación.</li>
+                                    <li>Hidratación y abastecimiento en ruta.</li>
+                                    <li>Zona de recuperación con agua, isotónicos y fruta.</li>
+                                    <li>Primeros auxilios y ambulancia.</li>
+                                </ul>
+                                <p> 
+                                    <small>Nota:</small> <br>
+                                    Inscripciones del 20 de agosto al 30 de septiembre de 2026 o hasta agotar existencias de kits, lo que suceda primero. La carrera no aplica para menores de edad.
+                                </p>
+                            </span>
+                        </div>
 
                     </aside>
                 </div>

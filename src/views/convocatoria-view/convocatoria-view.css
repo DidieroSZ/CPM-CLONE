@@ -29,13 +29,32 @@
     width: 100%;
 }
 
+    .type-card-01{
+        --back: var(--N300);
+        --text: var(--Blanco);
+        --acent: var(--V100);
+        --highlight: var(--V300); 
+    }
+    .type-card-02{
+        --back: var(--Blanco);
+        --text: var(--N300);
+        --acent: var(--V300);
+        --highlight: var(--V300); 
+    }
+    .type-card-03{
+        --back: var(--V100);
+        --text: var(--N300);
+        --acent: var(--N300);
+        --highlight: var(--V300); 
+    }
     .card-cpm{
         width: 100%;
         padding: 28px;
-        border-top: 4px solid var(--V100);
-        background-color: var(--N300);
-        color: var(--Blanco);
+        border-top: 4px solid var(--acent);
+        background-color: var(--back);
+        color: var(--text);
     }
+    
         .card-cpm > *{
             width: 100%;
             display: block;
@@ -45,6 +64,7 @@
             vertical-align: middle;
             margin-bottom: var(--Pad16);
             line-height: 1.7;
+            color: var(--acent);
         }
         .card-cpm > p{
             font-size: 25px;
@@ -59,13 +79,10 @@
                 justify-content: start;
                 align-items: start;
             }
-            .content-card > p{
-                /* line-height: 1.5; */
-            }
                 .content-card > p > small{
                     text-transform: uppercase;
                     font-size: 11px;
-                    color: var(--V300);
+                    color: var(--highlight);
                     font-weight: 800;
                 }
             .content-card > ul, ol{
