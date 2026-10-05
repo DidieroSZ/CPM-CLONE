@@ -1,122 +1,111 @@
-
-
 .dark-section,
 .registration-section {
     background: var(--dark-green);
-    color: #fff
+    color: var(--Blanco);
 }
 
 .route-section {
-    padding: 110px 0 125px
+    padding-block: calc(var(--Pad32) * 4);
 }
 
-.light-heading h2 {
-    color: #fff
+.section-heading{
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
 }
-
-.section-heading>p {
-    max-width: 330px;
-    color: #7f8e85;
-    line-height: 1.65
-}
+    .light-heading h2 > em {
+        color: var(--V100);
+    }
+    .section-heading > p {
+        border-left: solid 4px var(--V100);
+    }
 
 .route-layout {
     display: grid;
     grid-template-columns: .75fr 1.4fr;
-    gap: 65px;
-    margin-top: 62px;
+    gap: var(--Pad32);
+    margin-top: var(--Pad32);
     align-items: center
 }
+    .route-options {
+        display: flex;
+        flex-direction: column;
+        gap: var(--Pad16);
+    }
+        .route-option {
+            display: grid;
+            grid-template-columns: 1fr 1fr 20px;
+            align-items: center;
+            gap: var(--Pad16);
+            padding: var(--Pad16);
+            text-align: left;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--Blanco);
+            cursor: pointer;
+            transition: .25s;
+        }
+            .route-option:hover,
+            .route-option.active {
+                background: var(--V100);
+                color: var(--N300);
+                border-color: var(--V100);
+            }
 
-.route-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px
-}
+        .route-number {
+            font: var(--Pad32) 'Alfa Slab One';
+        }
 
-.route-option {
-    display: grid;
-    grid-template-columns: 1fr 1fr 20px;
-    align-items: center;
-    gap: 12px;
-    padding: 20px;
-    text-align: left;
-    border: 1px solid rgba(255, 255, 255, .17);
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    transition: .25s
-}
+    .route-option span:nth-child(2) {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: .09em;
+    }
+        .route-option svg {
+            width: 17px;
+        }
 
-.route-option:hover,
-.route-option.active {
-    background: var(--lime);
-    color: var(--ink);
-    border-color: var(--lime)
-}
+    .route-note {
+        color: #94a69b;
+        font-size: 12px;
+        margin-top: var(--Pad16);
+        line-height: 1.5;
+    }
+        .route-note svg {
+            width: 15px;
+            vertical-align: middle;
+            margin-right: 6px
+        }
 
-.route-number {
-    font: 34px 'Alfa Slab One'
-}
-
-.route-option span:nth-child(2) {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .09em
-}
-
-.route-option svg {
-    width: 17px
-}
-
-.route-note {
-    color: #94a69b;
-    font-size: 11px;
-    margin-top: 18px;
-    line-height: 1.5
-}
-
-.route-note svg {
-    width: 15px;
-    vertical-align: middle;
-    margin-right: 6px
-}
-
-.route-visual {
-    position: relative;
-    margin: 0;
-    background: #102b20;
-    overflow: hidden
-}
-
-.route-visual img {
-    width: 100%;
-    aspect-ratio: 1.65;
-    object-fit: cover;
-    display: block;
-    opacity: .9
-}
-
-.route-visual figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px;
-    background: linear-gradient(transparent, rgba(0, 30, 20, .95));
-    color: #fff
-}
-
-.route-visual figcaption span,
-.route-visual figcaption small {
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: .13em;
-    font-size: 9px;
-    color: var(--lime)
-}
-
-.route-visual figcaption strong {
-    display: block;
-    font: 40px 'Alfa Slab One'
-}
+    .route-visual {
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+    }
+        .route-visual img {
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: .9;
+        }
+        .route-visual figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: var(--Pad32);
+            background: linear-gradient(transparent, rgba(0, 30, 20, .95));
+            color: var(--Blanco);
+        }
+            .route-visual figcaption span,
+            .route-visual figcaption small {
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: .13em;
+                font-size: 9px;
+                color: var(--V100)
+            }
+            .route-visual figcaption strong {
+                display: block;
+                font: 40px 'Alfa Slab One'
+            }

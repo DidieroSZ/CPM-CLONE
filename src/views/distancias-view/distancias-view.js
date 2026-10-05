@@ -48,39 +48,35 @@ export class DistanciasView extends LitElement {
         return html`
             <section id="reto" class="section route-section dark-section">
                 <div class="page-shell">
-                    <section id="reto" class="section route-section dark-section">
-                        <div class="page-shell">
-                            <div class="section-heading light-heading d-flexx" data-reveal>
-                                <div>
-                                    <p class="eyebrow lime-text"><span></span> Elige tu reto</p>
-                                    <h2>Tu ritmo.<br><em>Tu historia.</em></h2>
-                                </div>
-                                <p>Dos distancias, una misma energía. Elige el recorrido que te lleve más lejos.</p>
-                            </div>
 
-                            <div class="route-layout">
-                                <div class="route-options" data-stagger>${['5K','10K'].map(route => html`
-                                    <button class=${this.selectedRoute === route ? 'route-option active' : 'route-option'} @click=${() => { this.selectedRoute = route; }}>
-                                        <span class="route-number">${route}</span>
-                                        <span>${route === '5K' ? 'Ideal para empezar' : 'El reto clásico'}</span>
-                                        <i data-lucide="arrow-up-right"></i>
-                                    </button>`
-                                )}
-                                    <p class="route-note"><i data-lucide="info"></i> Categoría libre femenil y varonil · Mayores de 18 años</p>
-                                </div>
-
-                                <figure class="route-visual">
-                                    <img src=${routeImage} alt="Mapa de la ruta ${this.selectedRoute}">
-                                    <figcaption>
-                                        <span>Ruta de corredor</span>
-                                        <strong>${this.selectedRoute}</strong>
-                                        <small>Salida y meta · Alameda de León</small>
-                                    </figcaption>
-                                </figure>
-                            </div>
+                    <div class="section-heading light-heading d-flexx d-row">
+                        <div>
+                            <p class="eyebrow lime-text"><span></span> Elige tu reto</p>
+                            <h2>Tu ritmo.<br><em>Tu historia.</em></h2>
                         </div>
-                    </section>
-                    
+                        <p>Dos distancias, una misma energía. Elige el recorrido que te lleve más lejos.</p>
+                    </div>
+
+                    <div class="route-layout">
+                        <div class="route-options">${['5K','10K'].map(route => html`
+                            <button class=${this.selectedRoute === route ? 'route-option active' : 'route-option'} @click=${() => { this.selectedRoute = route; }}>
+                                <span class="route-number">${route}</span>
+                                <span>${route === '5K' ? 'Ideal para empezar' : 'El reto clásico'}</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </button>`
+                        )}
+                            <p class="route-note"><i data-lucide="info"></i> Categoría libre femenil y varonil · Mayores de 18 años</p>
+                        </div>
+
+                        <figure class="route-visual">
+                            <img src=${routeImage} alt="Mapa de la ruta ${this.selectedRoute}">
+                            <figcaption>
+                                <span>Ruta de corredor</span>
+                                <strong>${this.selectedRoute}</strong>
+                                <small>Salida y meta · Alameda de León</small>
+                            </figcaption>
+                        </figure>
+                    </div>
 
                 </div>
             </section>

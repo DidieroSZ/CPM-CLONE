@@ -1,0 +1,63 @@
+.registration-section {
+    padding-block: calc(var(--Pad32) * 4);
+    background: var(--V400);
+    color: var(--Blanco);
+}
+    .light-heading h2 > em {
+        color: var(--V100);
+    }
+    .section-heading > p {
+        border-left: solid 4px var(--V100);
+    }
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--Pad16);
+    margin-top: var(--Pad32);
+}
+    .steps article {
+        padding: var(--Pad16);
+        background: rgba(255, 255, 255, .06);
+        border: 1px solid rgba(255, 255, 255, .12);
+        min-height: 180px;
+    }
+        .steps article > span {
+            color: var(--V100);
+            font: 25px 'Fugaz One'
+        }
+    .steps h3 {
+        font: 22px 'Alfa Slab One';
+        text-transform: uppercase;
+        margin: var(--Pad16) 0 var(--Pad8);
+    }
+    .steps p {
+        color: #99aaa0;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+.registration-bottom {
+    justify-content: space-between;
+    gap: var(--Pad16);
+    padding-top: var(--Pad32);
+    margin-top: var(--Pad32);
+    border-top: 1px solid rgba(255, 255, 255, .14)
+}
+    .registration-bottom div {
+        display: flex;
+        gap: var(--Pad16);
+        color: #9aaba2;
+        font-size: 12px;
+        max-width: 550px;
+        line-height: 1.5;
+    }
+    .registration-bottom  svg {
+        width: 15px;
+        vertical-align: middle;
+    }
+    .registration-bottom > .button svg {
+        color: var(--V100);
+        width: 15px;
+        color: var(--N300);
+    }

@@ -35,13 +35,13 @@ export class ConvocatoriaView extends LitElement {
     render() {
         return html`
             <section class="convocatoria-container d-flexx">
-                <div class="page-shell" data-stagger>
-                    <article class="top-text-container">
+                <div class="page-shell" >
+                    <article class="top-text-container" data-reveal>
                         <p class="eyebrow eyebrow-next"><span></span> TODO LO QUE NECESITAS SABER</p>
                         <h2>CONVOCATORIA</h2>
                     </article>
 
-                    <aside class="card-container">
+                    <aside class="card-container" data-stagger>
 
                         <div class="card-cpm type-card-01">
                             <small>01</small>
@@ -124,9 +124,7 @@ export class ConvocatoriaView extends LitElement {
                                     <li>Tu folio y/o número de corredor.</li>
                                     <li>Una identificación oficial.</li>
                                 </ul>
-                                <p> 
-                                    <small>Fechas de entrega:</small>
-                                </p>
+                                <p>Fechas de entrega:</p>
                                 <ul>
                                     <li>Viernes 02 de octubre: 10:00 a.m. a 4:00 p.m.</li>
                                     <li>Sábado 03 de octubre: 10:00 a.m. a 1:00 p.m.</li>
@@ -153,10 +151,6 @@ export class ConvocatoriaView extends LitElement {
                                     <li>Zona de recuperación con agua, isotónicos y fruta.</li>
                                     <li>Primeros auxilios y ambulancia.</li>
                                 </ul>
-                                <p> 
-                                    <small>Nota:</small> <br>
-                                    Inscripciones del 20 de agosto al 30 de septiembre de 2026 o hasta agotar existencias de kits, lo que suceda primero. La carrera no aplica para menores de edad.
-                                </p>
                             </span>
                         </div>
 
