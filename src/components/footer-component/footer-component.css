@@ -1,0 +1,49 @@
+.site-footer {
+    background: var(--N300);
+    color: var(--Blanco);
+    padding: var(--Pad32) 0 var(--Pad16);
+}
+    .footer-main {
+        justify-content: space-between;
+        align-items: end;
+        gap: var(--Pad32);
+        padding-bottom: 80px;
+    }
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            color: inherit;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: .09em;
+            line-height: 1.2;
+        }
+            .brand img {
+                width: 38px;
+                height: 38px;
+                object-fit: contain;
+            }
+            .brand strong {
+                display: block;
+                color: var(--V100);
+                font-size: 10px;
+                letter-spacing: .18em;
+            }
+        .footer-main h2 {
+            font-size: clamp(2rem, 3.5vw, 3.5rem);
+        }
+
+    .footer-bottom {
+        justify-content: space-between;
+        border-top: 1px solid var(--Gris);
+        padding-top: var(--Pad16);
+        color: var(--Gris);
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: .1em;
+    }
+        .footer-bottom a {
+            color: var(--V100);
+            text-decoration: none;
+        }

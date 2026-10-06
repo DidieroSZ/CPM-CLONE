@@ -11,8 +11,10 @@ import { hydrateIcons } from '../../utils/icons.js';
 import { animatePage } from '../../utils/animations.js';
 /* --- ICONS --- */
 
+/* --- ASSETS --- */
 import route5k from '../../assets/CPM/ruta5k_small.jpg';
 import route10k from '../../assets/CPM/ruta10k_small.jpg';
+/* --- ASSETS --- */
 
 export class DistanciasView extends LitElement {
     static properties = { 

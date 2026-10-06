@@ -13,7 +13,7 @@
 
     color: var(--Blanco);
     background-color: rgba(0, 59, 45, 0.700);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
     border: solid 1px var(--V400);
 }
     .brand {

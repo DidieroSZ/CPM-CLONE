@@ -4,6 +4,7 @@
     height: 300px;
     padding: var(--Pad32);
     text-transform: uppercase;
+    background-color: var(--V50);
 }
 .facts {
     display: grid;
@@ -12,7 +13,6 @@
 }
     .facts article {
         background: var(--Blanco);
-        border: 1px solid #e1e5dd;
         padding: var(--Pad16);
     }
         .facts svg {
@@ -23,7 +23,7 @@
         }
         .facts small, .facts span {
             display: block;
-            color: #7f887e;
+            color: var(--Gris);
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: .12em;

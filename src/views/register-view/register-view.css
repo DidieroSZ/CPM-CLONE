@@ -32,7 +32,7 @@
         margin: var(--Pad16) 0 var(--Pad8);
     }
     .steps p {
-        color: #99aaa0;
+        color: var(--Gris);
         font-size: 12px;
         line-height: 1.5;
     }
@@ -47,7 +47,7 @@
     .registration-bottom div {
         display: flex;
         gap: var(--Pad16);
-        color: #9aaba2;
+        color: var(--Gris);
         font-size: 12px;
         max-width: 550px;
         line-height: 1.5;

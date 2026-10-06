@@ -25,7 +25,7 @@
             }
             .benefit-card p {
                 margin-top: var(--Pad8);
-                color: #778176;
+                color: var(--Gris);
                 font-size: 12px;
             }
 
@@ -36,14 +36,14 @@
         gap: var(--Pad16);
         margin-top: calc(var(--Pad32) * 2);
         padding: var(--Pad32);
-        background: #e9f0e4;
+        background: var(--V50);
     }
         .merch-strip h3 {
             font: var(--Pad32) 'Alfa Slab One';
             text-transform: uppercase;
         }
         .merch-strip p:last-child {
-            color: #667266;
+            color: var(--Gris);
             font-size: 12px;
             line-height: 1.5;
             max-width: 270px;

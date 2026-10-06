@@ -1,0 +1,72 @@
+.prizes {
+    background: var(--Blanco);
+    padding-block: calc(var(--Pad32) * 4);
+}
+
+    .prize-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--Pad16);
+        margin-top: var(--Pad32);
+    }
+        .prize-card {
+            border: 1px solid #dfe5dc;
+            padding: var(--Pad16);
+            background-color: var(--Paper);
+        }
+        .prize-card.featured {
+            background: var(--V300);
+            color: var(--Blanco);
+            border-color: var(--V300)
+        }
+            .prize-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                text-transform: uppercase;
+                font-size: 10px;
+                letter-spacing: .12em;
+                color: #748075;
+                margin-bottom: var(--Pad32);
+            }
+
+            .featured .prize-top {
+                color: #bbd4c2
+            }
+                .prize-top strong {
+                    color: var(--green);
+                    font: 44px 'Alfa Slab One'
+                }
+                    .featured .prize-top strong {
+                        color: var(--V100)
+                    }
+            .prize-row {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                padding: var(--Pad16) 0;
+                border-top: 1px solid #e0e6de
+            }
+            .featured .prize-row {
+                border-color: rgba(255, 255, 255, .16)
+            }
+                .prize-row span {
+                    font: 16px 'Fugaz One'
+                }
+                .prize-row small {
+                    display: inline-block;
+                    color: #8a958a;
+                    font: 10px 'Kedebideri';
+                    text-transform: uppercase;
+                    margin-left: var(--Pad8);
+                }
+                .featured .prize-row small {
+                    color: #b2c6b8
+                }
+                .prize-row b {
+                    font: 26px 'Alfa Slab One';
+                    color: var(--green)
+                }
+                .featured .prize-row b {
+                    color: var(--V100)
+                }

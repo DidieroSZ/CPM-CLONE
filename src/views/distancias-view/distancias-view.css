@@ -1,6 +1,6 @@
 .dark-section,
 .registration-section {
-    background: var(--dark-green);
+    background: var(--V400);
     color: var(--Blanco);
 }
 
@@ -66,7 +66,7 @@
         }
 
     .route-note {
-        color: #94a69b;
+        color: var(--Gris);
         font-size: 12px;
         margin-top: var(--Pad16);
         line-height: 1.5;
