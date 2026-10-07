@@ -96,11 +96,11 @@ export class CounterComponent extends LitElement {
         } = this.timeRemaining;
 
         return html`
-            <section class="counter-container d-flexx">
+            <section class="counter-container d-flexx" aria-labelledby="counter-title">
                 <div class="page-shell d-flexx d-row" data-stagger>
                     <article class="counter-text-side">
                         <p class="eyebrow"><span></span> La cuenta regresiva</p>
-                        <h2 class="titulo03">Nos vemos en la salida.</h2>
+                        <h2 id="counter-title" class="titulo03">Nos vemos en la salida.</h2>
                     </article>
 
                     <aside class="counter-numbers-side d-flexx d-col">

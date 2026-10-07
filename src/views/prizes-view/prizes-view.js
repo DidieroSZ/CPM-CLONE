@@ -36,13 +36,13 @@ export class PrizesView extends LitElement {
 
     render() {
         return html`
-            <section class="section prizes ">
+            <section class="section prizes" aria-labelledby="prizes-title">
                 <div class="page-shell">
 
                 <div class="section-heading d-flexx d-row" data-reveal>
                     <div>
                         <p class="eyebrow eyebrow-next"><span></span> Corre por más</p>
-                        <h2 class="titulo02">Premiación<br><em>top 3 por categoría.</em></h2>
+                        <h2 id="prizes-title" class="titulo02">Premiación Carrera CPM<br><em>top 3 por categoría.</em></h2>
                     </div>
                     <p>Reconocemos el esfuerzo de quienes llegan más lejos en cada distancia.</p>
                 </div>

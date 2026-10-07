@@ -36,13 +36,13 @@ export class RegisterView extends LitElement {
 
     render() {
         return html`
-            <section class="section registration-section">
+            <section class="section registration-section" aria-labelledby="registration-title">
                 <div class="page-shell">
 
                     <div class="section-heading light-heading d-flexx d-row" data-reveal>
                         <div>
                             <p class="eyebrow"><span></span> Tu lugar empieza aquí</p>
-                            <h2 class="titulo02">Regístrate.<br><em>Corre por <br>algo más.</em></h2>
+                            <h2 id="registration-title" class="titulo02">Regístrate en la Carrera CPM 2026.<br><em>Corre por <br>algo más.</em></h2>
                         </div>
                         <p>Conoce las bases de participación y completa tu proceso en una sucursal participante de Caja Popular Mexicana.</p>
                     </div>
@@ -58,10 +58,10 @@ export class RegisterView extends LitElement {
 
                     <div class="registration-bottom d-flexx d-row">
                         <div class="d-flexx notas">
-                            <i data-lucide="circle-check"></i>
+                            <i data-lucide="circle-check" aria-hidden="true"></i>
                             <span>Inscripciones del 20 de agosto al 30 de septiembre de 2026 o hasta agotar existencias.</span>
                         </div>
-                        <a class="button button-lime">Quiero registrarme <i data-lucide="move-right"></i></a>
+                        <a class="button button-lime" href="#Registro" aria-label="Quiero registrarme en la Carrera CPM">Quiero registrarme <i data-lucide="move-right" aria-hidden="true"></i></a>
                     </div>
 
                 </div>

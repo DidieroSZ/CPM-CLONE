@@ -53,3 +53,25 @@
                 font-size: 13px;
                 padding-top: var(--Pad16);
             }
+
+@media (max-width: 800px) {
+    .faq-section {
+        padding-block: calc(var(--Pad32) * 2.5);
+    }
+
+    .section-intro {
+        max-width: none;
+    }
+
+    .section-intro > p:last-child {
+        max-width: 100%;
+    }
+
+    .faq-list {
+        margin-top: var(--Pad32);
+    }
+
+    .faq-list summary {
+        gap: var(--Pad16);
+    }
+}

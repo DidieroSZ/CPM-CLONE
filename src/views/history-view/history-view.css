@@ -46,3 +46,41 @@
                 font-weight: 800;
                 letter-spacing: 0.08em;
             }
+
+@media (max-width: 800px) {
+    .history-container {
+        min-height: 0;
+        padding-block: calc(var(--Pad32) * 2.5);
+    }
+
+    .inner-container {
+        align-items: stretch;
+        gap: var(--Pad16);
+    }
+
+    .first-text,
+    .second-text {
+        width: 100%;
+    }
+
+    .first-text {
+        font-size: clamp(1.35rem, 4.8vw, 2rem);
+    }
+
+    .first-text br {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+
+    .footer-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+    .footer-main > div {
+        text-align: center;
+    }
+}

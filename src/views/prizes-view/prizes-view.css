@@ -67,3 +67,19 @@
                 .featured .prize-row b {
                     color: var(--V100)
                 }
+
+@media (max-width: 800px) {
+    .prizes {
+        padding-block: calc(var(--Pad32) * 2.5);
+    }
+}
+
+@media (max-width: 600px) {
+    .prize-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prize-top {
+        margin-bottom: var(--Pad16);
+    }
+}

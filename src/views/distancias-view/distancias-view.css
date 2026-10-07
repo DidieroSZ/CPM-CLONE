@@ -85,7 +85,7 @@
             display: block;
             opacity: .9;
         }
-        .route-visual figcaption {
+            .route-visual figcaption {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -99,4 +99,53 @@
                 letter-spacing: .13em;
                 color: var(--V100)
             }
+
+@media (max-width: 800px) {
+    .route-section {
+        padding-block: calc(var(--Pad32) * 2.5);
+    }
+
+    .route-layout {
+        grid-template-columns: 1fr;
+        gap: var(--Pad16);
+    }
+
+    .route-visual {
+        order: -1;
+    }
+
+    .route-option {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .route-option {
+        grid-template-columns: minmax(0, 1fr) auto 20px;
+        gap: var(--Pad8);
+    }
+
+    .route-option .route-number {
+        font-size: 2rem;
+    }
+
+    .route-visual figcaption {
+        padding: var(--Pad16);
+    }
+}
+
+@media (max-width: 360px) {
+    .route-option {
+        padding: 12px 10px;
+    }
+
+    .route-option .notas {
+        font-size: 8px;
+        letter-spacing: .06em;
+    }
+
+    .route-note {
+        font-size: 8px;
+    }
+}
 

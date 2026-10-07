@@ -23,6 +23,7 @@
 
     .hero-description {
         color: var(--B100);
+        max-width: 620px;
     }
 
     .hero-actions {
@@ -70,3 +71,56 @@
             font-size: var(--Pad16);
             line-height: 1.1;
         }
+
+@media (max-width: 800px) {
+    .hero-description {
+        max-width: 34rem;
+    }
+
+    .hero-art {
+        right: -8%;
+    }
+
+    .art-number {
+        font-size: clamp(10rem, 42vw, 20rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 100svh;
+        min-height: 680px;
+        padding: var(--Pad16);
+    }
+
+    .hero-copy {
+        padding-top: 72px;
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions a {
+        width: 100%;
+    }
+
+    .hero-meta {
+        align-items: start;
+    }
+
+    .hero-art {
+        right: -18%;
+        bottom: 2%;
+    }
+    .hero-meta {
+        width: 100%;
+        gap: 0;
+    }
+
+    .art-number {
+        font-size: clamp(8rem, 48vw, 13rem);
+    }
+}

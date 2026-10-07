@@ -47,3 +47,35 @@
             color: var(--V100);
             text-decoration: none;
         }
+
+@media (max-width: 800px) {
+    .site-footer {
+        padding-top: var(--Pad32);
+    }
+
+    .footer-main {
+        padding-bottom: var(--Pad32);
+    }
+
+    .footer-main > div {
+        margin-top: var(--Pad32);
+    }
+
+    .footer-bottom > * {
+        display: block;
+        margin-top: var(--Pad8);
+    }
+}
+@media (max-width: 480px) {
+
+    .footer-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+    .footer-main > div {
+        text-align: center;
+    }
+}

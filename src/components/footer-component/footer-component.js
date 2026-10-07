@@ -32,7 +32,7 @@ export class FooterComponent extends LitElement {
 
     render() {
         return html`
-            <footer class="site-footer">
+            <footer class="site-footer" aria-labelledby="footer-title">
 
                 <div class="page-shell footer-main d-flexx">
                     <a class="brand" href="#Inicio" data-target="Inicio" @click=${this.handleNavigation}>
@@ -41,9 +41,9 @@ export class FooterComponent extends LitElement {
                     </a>
                     <div>
                         <p class="eyebrow"><span></span>Corre tu historia</p>
-                        <h2 class="titulo02">Cada kilómetro<br>transforma vidas.</h2>
+                        <h2 id="footer-title" class="titulo02">Cada kilómetro<br>transforma vidas.</h2>
                     </div>
-                    <a class="button button-lime" href="#Registro" data-target="Registro" @click=${this.handleNavigation}>Regístrate ahora <i data-lucide="arrow-up-right"></i></a>
+                    <a class="button button-lime" href="#Registro" data-target="Registro" @click=${this.handleNavigation}>Regístrate ahora <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
                 </div>
 
                 <div class="page-shell footer-bottom d-flexx">

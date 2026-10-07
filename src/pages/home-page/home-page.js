@@ -51,7 +51,7 @@ export class HomePage extends LitElement {
 
     render() {
         return html`
-            <main>
+            <main id="contenido-principal">
                 <nav-component></nav-component>
                 <header-view id="Inicio"></header-view>
                 <counter-component></counter-component>

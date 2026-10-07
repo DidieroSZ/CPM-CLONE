@@ -39,19 +39,19 @@ export class BenefitsView extends LitElement {
 
     render() {
         return html`
-            <section class="section benefits page-shell">
+            <section id="kit-contenido" class="section benefits page-shell" aria-labelledby="benefits-title">
 
                 <div class="section-heading d-flexx d-row" data-reveal>
                     <div>
                         <p class="eyebrow eyebrow-next"><span></span>  Lo que te llevas</p>
-                        <h2 class="titulo02">Corre con<br><em>todo <br>incluido.</em></h2>
+                        <h2 id="benefits-title" class="titulo02">Corre con<br><em>todo <br>incluido.</em></h2>
                     </div>
                     <p>Tu inscripción incluye lo necesario para vivir la experiencia CPM de principio a fin.</p>
                 </div>
 
                 <div class="benefit-grid" data-stagger>${raceData.benefits.map(b => html`
                         <article class="benefit-card">
-                            <i data-lucide=${b.icon}></i>
+                            <i data-lucide=${b.icon} aria-hidden="true"></i>
                             <h3>${b.label}</h3>
                             <p class="notas">${b.detail}</p>
                         </article>`

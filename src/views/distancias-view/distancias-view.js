@@ -48,26 +48,26 @@ export class DistanciasView extends LitElement {
         const routeImage = this.selectedRoute === '5K' ? route5k : route10k;
         
         return html`
-            <section id="reto" class="section route-section dark-section">
+            <section id="reto" class="section route-section dark-section" aria-labelledby="distancias-title">
                 <div class="page-shell">
 
                     <div class="section-heading light-heading d-flexx d-row">
                         <div>
                             <p class="eyebrow lime-text"><span></span> Elige tu reto</p>
-                            <h2 class="titulo02">Tu ritmo.<br><em>Tu historia.</em></h2>
+                            <h2 id="distancias-title" class="titulo02">Tu ritmo.<br><em>Tu historia.</em></h2>
                         </div>
                         <p>Dos distancias, una misma energía. Elige el recorrido que te lleve más lejos.</p>
                     </div>
 
                     <div class="route-layout">
                         <div class="route-options">${['5K','10K'].map(route => html`
-                            <button class=${this.selectedRoute === route ? 'route-option active' : 'route-option'} @click=${() => { this.selectedRoute = route; }}>
+                            <button type="button" aria-pressed=${this.selectedRoute === route} aria-label=${`Seleccionar ruta ${route}`} class=${this.selectedRoute === route ? 'route-option active' : 'route-option'} @click=${() => { this.selectedRoute = route; }}>
                                 <span class="route-number titulo03">${route}</span>
                                 <span class="notas">${route === '5K' ? 'Ideal para empezar' : 'El reto clásico'}</span>
-                                <i data-lucide="route"></i>
+                                <i data-lucide="route" aria-hidden="true"></i>
                             </button>`
                         )}
-                            <p class="route-note notas"><i data-lucide="info"></i> Categoría libre femenil y varonil · Mayores de 18 años</p>
+                            <p class="route-note notas"><i data-lucide="info" aria-hidden="true"></i> Categoría libre femenil y varonil · Mayores de 18 años</p>
                         </div>
 
                         <figure class="route-visual">

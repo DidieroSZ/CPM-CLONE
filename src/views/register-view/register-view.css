@@ -59,3 +59,27 @@
         width: 17px;
         color: var(--N300);
     }
+
+@media (max-width: 800px) {
+    .registration-section {
+        padding-block: calc(var(--Pad32) * 2.5);
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .registration-bottom > .button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .steps article {
+        min-height: 0;
+    }
+}

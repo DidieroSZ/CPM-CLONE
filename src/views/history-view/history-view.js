@@ -34,11 +34,11 @@ export class HistoryView extends LitElement {
 
     render() {
         return html`
-            <section class="history-container d-flexx">
+            <section class="history-container d-flexx" aria-labelledby="history-title">
                 <div class="page-shell inner-container d-flexx " data-stagger>
                     <article class="top-text-container">
                         <p class="eyebrow eyebrow-next"><span></span> una carrea con propósito</p>
-                        <h2 class="titulo02">75 Años <br> Tranformando <br>Vidas.</h2>
+                        <h2 id="history-title" class="titulo02">75 Años <br> Transformando <br>Vidas.</h2>
                     </article>
 
                     <aside class="first-text">
@@ -46,7 +46,7 @@ export class HistoryView extends LitElement {
                     </aside>
                     <aside class="second-text texto">
                         <p>La cita es el domingo 04 de octubre del 2026 en Oaxaca de Juárez. Corre 5 o 10 kilómetros y forma parte de esta celebración.</p>
-                        <a class="text-link" href="#carrera">Quiero registrarme <i data-lucide="move-right"></i></a>
+                        <a class="text-link" href="#Registro">Quiero registrarme <i data-lucide="move-right" aria-hidden="true"></i></a>
                     </aside>
 
                 </div>

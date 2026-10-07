@@ -86,3 +86,42 @@
                 line-height: 1.5;
                 margin-bottom: var(--Pad8);
             }
+
+            .content-card p,
+            .content-card li {
+                overflow-wrap: anywhere;
+            }
+
+@media (max-width: 1000px) {
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 800px) {
+    .convocatoria-container {
+        padding-block: calc(var(--Pad32) * 2.5);
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-cpm {
+        padding: var(--Pad16);
+    }
+
+    .card-cpm > p {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 360px) {
+    .card-cpm > p {
+        font-size: 18px;
+    }
+
+    .card-cpm > small {
+        font-size: 13px;
+    }
+}

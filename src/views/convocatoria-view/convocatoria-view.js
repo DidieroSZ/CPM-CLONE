@@ -34,11 +34,11 @@ export class ConvocatoriaView extends LitElement {
 
     render() {
         return html`
-            <section class="convocatoria-container d-flexx">
+            <section id="convocatoria-contenido" class="convocatoria-container d-flexx" aria-labelledby="convocatoria-title">
                 <div class="page-shell" >
                     <article class="top-text-container" data-reveal>
                         <p class="eyebrow eyebrow-next"><span></span> TODO LO QUE NECESITAS SABER</p>
-                        <h2 class="titulo02">CONVOCATORIA</h2>
+                        <h2 id="convocatoria-title" class="titulo02">Convocatoria Carrera CPM 2026</h2>
                     </article>
 
                     <aside class="card-container" data-stagger>

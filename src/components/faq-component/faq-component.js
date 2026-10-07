@@ -36,21 +36,21 @@ export class FaqComponent extends LitElement {
 
     render() {
         return html`
-            <section class="section faq-section">
+            <section class="section faq-section" aria-labelledby="faq-title">
                 <div class="page-shell faq-layout d-flexx d-row">
 
                     <div class="section-heading section-intro" data-reveal>
                         <div>
                             <p class="eyebrow eyebrow-next"><span></span> Preguntas frecuentes</p>
-                            <h2 class="titulo02">Todo<br><em>claro.</em></h2>
+                            <h2 id="faq-title" class="titulo02">Todo<br><em>claro.</em></h2>
                         </div>
                         <p>Resuelve lo esencial antes de comenzar tu carrera.</p>
                     </div>
                     
                     <div class="faq-list" data-stagger>${raceData.faqs.map(([q,a],i) => html`
                         <details ?open=${i===0}>
-                        <summary>${q}<i data-lucide="plus"></i></summary>
-                        <p>${a}</p>
+                        <summary aria-controls=${`faq-answer-${i}`}>${q}<i data-lucide="plus" aria-hidden="true"></i></summary>
+                        <p id=${`faq-answer-${i}`}>${a}</p>
                         </details>`
                     )}
                     </div>

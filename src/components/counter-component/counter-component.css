@@ -1,6 +1,7 @@
 .counter-container{
     width: 100%;
-    height: 300px;
+    min-height: 300px;
+    height: auto;
     background-color: var(--N300);
     color: var(--Blanco);
     padding: var(--Pad32);
@@ -22,7 +23,7 @@
             gap: var(--Pad8);
         }
             .container-number{
-                min-width: 80px;
+                min-width: clamp(58px, 7vw, 80px);
                 height: auto;
                 background: #1f211e;
                 color: var(--Blanco);
@@ -37,3 +38,52 @@
                 .container-number > small{
                     color: var(--B100);
                 }
+
+@media (max-width: 800px) {
+    .counter-container {
+        padding-block: var(--Pad32);
+    }
+
+    .counter-text-side {
+        width: 100%;
+    }
+
+    .counter-numbers-side {
+        width: 100%;
+        margin-top: var(--Pad16);
+    }
+
+    .counter {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .container-number {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-container > div.page-shell {
+        flex-direction: column;
+    }
+    .container-number {
+        padding-inline: 4px;
+    }
+
+    .container-number > p {
+        font-size: clamp(1.5rem, 9vw, 2rem);
+    }
+}
+
+@media (max-width: 360px) {
+    .counter-container {
+        padding-inline: 12px;
+    }
+
+    .container-number > small {
+        font-size: 8px;
+        letter-spacing: .06em;
+    }
+}
