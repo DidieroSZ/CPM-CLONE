@@ -27,13 +27,12 @@
             font: 25px 'Fugaz One'
         }
     .steps h3 {
-        font: 22px 'Alfa Slab One';
+        font: 22px 'AlfaSlabOne';
         text-transform: uppercase;
         margin: var(--Pad16) 0 var(--Pad8);
     }
     .steps p {
         color: var(--Gris);
-        font-size: 12px;
         line-height: 1.5;
     }
 
@@ -48,16 +47,15 @@
         display: flex;
         gap: var(--Pad16);
         color: var(--Gris);
-        font-size: 12px;
         max-width: 550px;
         line-height: 1.5;
     }
     .registration-bottom  svg {
-        width: 15px;
+        width: 17px;
         vertical-align: middle;
     }
     .registration-bottom > .button svg {
         color: var(--V100);
-        width: 15px;
+        width: 17px;
         color: var(--N300);
     }

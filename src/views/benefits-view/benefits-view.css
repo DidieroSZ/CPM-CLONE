@@ -1,5 +1,5 @@
 .benefits {
-    background: var(--paper);
+    background: var(--Paper);
     padding-block: calc(var(--Pad32) * 4);
 }
     .benefit-grid {
@@ -10,23 +10,23 @@
         margin-top: calc(var(--Pad32) * 2);
     }
         .benefit-card {
-            background: var(--paper);
+            background: var(--Paper);
             min-height: 170px;
             padding: var(--Pad16);
         }
             .benefit-card svg {
-                color: var(--green);
-                width: 27px;
+                color: var(--V300);
+                width: var(--Pad32);
                 margin-bottom: var(--Pad32);
             }
             .benefit-card h3 {
-                font: 20px 'Alfa Slab One';
+                font: 22px 'AlfaSlabOne';
                 text-transform: uppercase;
             }
             .benefit-card p {
                 margin-top: var(--Pad8);
                 color: var(--Gris);
-                font-size: 12px;
+
             }
 
     .merch-strip {
@@ -39,13 +39,12 @@
         background: var(--V50);
     }
         .merch-strip h3 {
-            font: var(--Pad32) 'Alfa Slab One';
-            text-transform: uppercase;
+            font-size: var(--Pad32);
         }
         .merch-strip p:last-child {
             color: var(--Gris);
-            font-size: 12px;
             line-height: 1.5;
+            letter-spacing: 0;
             max-width: 270px;
         }
         .merch-strip img {

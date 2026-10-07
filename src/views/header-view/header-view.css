@@ -20,31 +20,15 @@
         align-items: start;
         gap: var(--Pad8);
     }
-        .eyebrow {
-            text-transform: uppercase;
-            font-size: 10px;
-            letter-spacing: .22em;
-            font-weight: 800;
-            color: var(--V400);
-            color: var(--V100);
-        }
-            .eyebrow span {
-                display: inline-block;
-                width: 23px;
-                border-top: 2px solid currentColor;
-                vertical-align: middle;
-                margin-right: 9px;
-            }
 
     .hero-description {
-        width: 430px;
         color: var(--B100);
     }
 
     .hero-actions {
         display: flex;
         align-items: center;
-        gap: 24px;
+        gap: var(--Pad16);
         margin-block: var(--Pad16);
     }
         .hero-actions a {
@@ -58,25 +42,16 @@
         border-top: 1px solid var(--B100);
         justify-content: start;
     }
-        .hero-meta span {
-            color: rgba(255, 255, 255, .58);
-            text-transform: uppercase;
-            font-size: 10px;
-            letter-spacing: .13em;
+        .hero-meta b {
+            display: block;
+            margin-bottom: 6px
         }
-            .hero-meta b {
-                display: block;
-                color: var(--Blanco);
-                font-size: var(--Pad16);
-                margin-bottom: 6px
-            }
 
     .hero-art {
         position: absolute;
         right: var(--Pad32);
         bottom: 0;
         color: rgba(199, 230, 0, .35);
-        font-family: 'Alfa Slab One';
         line-height: .75;
         transform: rotate(-10deg);
         text-transform: uppercase;

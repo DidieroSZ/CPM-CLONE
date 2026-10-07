@@ -48,8 +48,6 @@ npm run dev
 ![Lit](https://img.shields.io/badge/Lit-Element-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
 ![Vite](https://img.shields.io/badge/Vite-Bundler-purple)
-![NodeJS](https://img.shields.io/badge/Node-JS-purple)
-![Resend](https://img.shields.io/badge/Resend-F62440)
 
 - **Lit (LitElement)** → Componentes web reactivos
 - **JavaScript (Vanilla)** → Lógica principal de la aplicación

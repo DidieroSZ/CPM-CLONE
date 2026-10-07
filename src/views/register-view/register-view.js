@@ -42,7 +42,7 @@ export class RegisterView extends LitElement {
                     <div class="section-heading light-heading d-flexx d-row" data-reveal>
                         <div>
                             <p class="eyebrow"><span></span> Tu lugar empieza aquí</p>
-                            <h2>Regístrate.<br><em>Corre por <br>algo más.</em></h2>
+                            <h2 class="titulo02">Regístrate.<br><em>Corre por <br>algo más.</em></h2>
                         </div>
                         <p>Conoce las bases de participación y completa tu proceso en una sucursal participante de Caja Popular Mexicana.</p>
                     </div>
@@ -51,13 +51,13 @@ export class RegisterView extends LitElement {
                             <article>
                                 <span>${n}</span>
                                 <h3>${t}</h3>
-                                <p>${d}</p>
+                                <p class="notas">${d}</p>
                             </article>`
                         )}
                     </div>
 
                     <div class="registration-bottom d-flexx d-row">
-                        <div class="d-flexx">
+                        <div class="d-flexx notas">
                             <i data-lucide="circle-check"></i>
                             <span>Inscripciones del 20 de agosto al 30 de septiembre de 2026 o hasta agotar existencias.</span>
                         </div>

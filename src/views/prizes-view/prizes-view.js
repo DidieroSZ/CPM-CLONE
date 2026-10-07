@@ -42,19 +42,19 @@ export class PrizesView extends LitElement {
                 <div class="section-heading d-flexx d-row" data-reveal>
                     <div>
                         <p class="eyebrow eyebrow-next"><span></span> Corre por más</p>
-                        <h2>Premiación<br><em>top 3 por categoría.</em></h2>
+                        <h2 class="titulo02">Premiación<br><em>top 3 por categoría.</em></h2>
                     </div>
                     <p>Reconocemos el esfuerzo de quienes llegan más lejos en cada distancia.</p>
                 </div>
 
                 <div class="prize-grid" data-stagger>${raceData.prizes.map((p,i) => html`
                     <article class=${i === 0 ? 'prize-card featured' : 'prize-card'}>
-                        <div class="prize-top">
+                        <div class="prize-top notas">
                             <span>Rama femenil · varonil</span>
                             <strong>${p.distance}</strong>
                         </div>
                         <div class="prize-row">
-                            <span>01 <small>primer lugar</small></span>
+                            <span>01 <small class="notas">primer lugar</small></span>
                             <b>${p.first}</b>
                         </div>
                         <div class="prize-row">

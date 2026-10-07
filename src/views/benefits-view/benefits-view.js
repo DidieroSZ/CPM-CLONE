@@ -44,7 +44,7 @@ export class BenefitsView extends LitElement {
                 <div class="section-heading d-flexx d-row" data-reveal>
                     <div>
                         <p class="eyebrow eyebrow-next"><span></span>  Lo que te llevas</p>
-                        <h2>Corre con<br><em>todo <br>incluido.</em></h2>
+                        <h2 class="titulo02">Corre con<br><em>todo <br>incluido.</em></h2>
                     </div>
                     <p>Tu inscripción incluye lo necesario para vivir la experiencia CPM de principio a fin.</p>
                 </div>
@@ -53,7 +53,7 @@ export class BenefitsView extends LitElement {
                         <article class="benefit-card">
                             <i data-lucide=${b.icon}></i>
                             <h3>${b.label}</h3>
-                            <p>${b.detail}</p>
+                            <p class="notas">${b.detail}</p>
                         </article>`
                     )}
                 </div>
@@ -61,8 +61,8 @@ export class BenefitsView extends LitElement {
                 <div class="merch-strip">
                     <div>
                         <p class="eyebrow eyebrow-next"><span></span> Diseñado para avanzar</p>
-                        <h3>Vístete de historia.</h3>
-                        <p>Playera conmemorativa y medalla para recordar cada kilómetro.</p>
+                        <h3 class="titulo03">Vístete de <br>historia.</h3>
+                        <p class="notas">Playera conmemorativa y medalla para recordar cada kilómetro.</p>
                     </div>
                     <img src=${shirt} alt="Playera conmemorativa CPM">
                     <img src=${medal} alt="Medalla conmemorativa CPM">

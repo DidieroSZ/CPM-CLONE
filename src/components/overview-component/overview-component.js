@@ -39,30 +39,30 @@ export class OverviewComponent extends LitElement {
 
                     <article>
                         <i data-lucide="map-pin"></i>
-                        <small>Salida y meta</small>
+                        <small class="notas">Salida y meta</small>
                         <strong>Alameda de León</strong>
-                        <span>Av. Independencia S/N</span>
+                        <span class="notas">Av. Independencia S/N</span>
                     </article>
 
                     <article>
                         <i data-lucide="calendar-days"></i>
-                        <small>Fecha</small>
+                        <small class="notas">Fecha</small>
                         <strong>04.10.26</strong>
-                        <span>Domingo</span>
+                        <span class="notas">Domingo</span>
                     </article>
 
                     <article>
                         <i data-lucide="timer"></i>
-                        <small>Inicio</small>
+                        <small class="notas">Inicio</small>
                         <strong>07:00 AM</strong>
-                        <span>¡Lllega puntual!</span>
+                        <span class="notas">¡Lllega puntual!</span>
                     </article>
                     
                     <article>
                         <i data-lucide="users"></i>
-                        <small>Cupo</small>
+                        <small class="notas">Cupo</small>
                         <strong>1,300</strong>
-                        <span>corredores</span>
+                        <span class="notas">corredores</span>
                     </article>
 
                 </div>

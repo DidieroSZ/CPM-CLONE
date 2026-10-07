@@ -51,15 +51,13 @@
                 color: var(--N300);
                 border-color: var(--V100);
             }
-
-        .route-number {
-            font: var(--Pad32) 'Alfa Slab One';
-        }
+            .route-option.active span:nth-child(2) {
+                color: var(--N300);
+            }
 
     .route-option span:nth-child(2) {
-        font-size: 11px;
-        text-transform: uppercase;
         letter-spacing: .09em;
+        color: var(--Blanco);
     }
         .route-option svg {
             width: 17px;
@@ -67,12 +65,11 @@
 
     .route-note {
         color: var(--Gris);
-        font-size: 12px;
         margin-top: var(--Pad16);
         line-height: 1.5;
     }
         .route-note svg {
-            width: 15px;
+            width: 17px;
             vertical-align: middle;
             margin-right: 6px
         }
@@ -97,15 +94,9 @@
             background: linear-gradient(transparent, rgba(0, 30, 20, .95));
             color: var(--Blanco);
         }
-            .route-visual figcaption span,
             .route-visual figcaption small {
                 display: block;
-                text-transform: uppercase;
                 letter-spacing: .13em;
-                font-size: 9px;
                 color: var(--V100)
             }
-            .route-visual figcaption strong {
-                display: block;
-                font: 40px 'Alfa Slab One'
-            }
+

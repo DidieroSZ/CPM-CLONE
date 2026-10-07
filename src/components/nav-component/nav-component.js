@@ -33,31 +33,45 @@ export class NavComponent extends LitElement {
         return html`
             <nav class="site-nav-container d-flexx d-row">
 
-                <a class="brand" href="#inicio">
+                <a class="brand" href="#Inicio" data-target="Inicio" @click=${this.handleNavigation}>
                     <img src=${logo} alt="Caja Popular Mexicana">
                     <span>CARRERA CPM<strong>75 AÑOS</strong></span>
                 </a>
                 <div class="desktop-nav d-flexx d-row">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#carrera">La carrera</a>
-                    <a href="#convocatoria">Convocatoria</a>
-                    <a href="#distancias">Distancias</a>
-                    <a href="#kit">Kit de Corredor</a>
-                    <a href="#registro">Registro</a>
-                    <a href="#premiación">Premiación</a>
-                    <a href="#faq">Preguntas</a>
+                    <a href="#Inicio" data-target="Inicio" @click=${this.handleNavigation}>Inicio</a>
+                    <a href="#Carrera" data-target="Carrera" @click=${this.handleNavigation}>La carrera</a>
+                    <a href="#Convocatoria" data-target="Convocatoria" @click=${this.handleNavigation}>Convocatoria</a>
+                    <a href="#Distancias" data-target="Distancias" @click=${this.handleNavigation}>Distancias</a>
+                    <a href="#Kit" data-target="Kit" @click=${this.handleNavigation}>Kit de Corredor</a>
+                    <a href="#Registro" data-target="Registro" @click=${this.handleNavigation}>Registro</a>
+                    <a href="#Premiacion" data-target="Premiacion" @click=${this.handleNavigation}>Premiación</a>
+                    <a href="#FAQS" data-target="FAQS" @click=${this.handleNavigation}>Faq´s</a>
                 </div>
-                <a class="button button-lime header-cta" href="#registro">
+                <a class="button button-lime header-cta" href="#Registro" data-target="Registro" @click=${this.handleNavigation}>
                     Regístrate <i data-lucide="arrow-up-right"></i>
                 </a>
                     
-                <a class="menu-link" href="#registro" aria-label="Ir al registro">
+                <a class="menu-link" href="#Registro" data-target="Registro" @click=${this.handleNavigation} aria-label="Ir al registro">
                     <i data-lucide="menu"></i>
                 </a>
 
             </nav>
         `;
     };
+
+    handleNavigation(event) {
+        const target = event.currentTarget.dataset.target;
+
+        this.dispatchEvent(
+            new CustomEvent('navigate-section', {
+                detail: {
+                    target
+                },
+                bubbles: true,
+                composed: true
+            })
+        );
+    }
 
 }
 customElements.define('nav-component', NavComponent);

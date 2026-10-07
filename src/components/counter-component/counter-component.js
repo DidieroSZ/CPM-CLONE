@@ -100,26 +100,26 @@ export class CounterComponent extends LitElement {
                 <div class="page-shell d-flexx d-row" data-stagger>
                     <article class="counter-text-side">
                         <p class="eyebrow"><span></span> La cuenta regresiva</p>
-                        <h2>Nos vemos en la salida.</h2>
+                        <h2 class="titulo03">Nos vemos en la salida.</h2>
                     </article>
 
                     <aside class="counter-numbers-side d-flexx d-col">
                         <div class="counter d-flexx d-row">
                             <span class="container-number">
                                 <p class="cpm-carrera-font">${this.formatNumber(days)}</p>
-                                <small>DÍAS</small>
+                                <small class="notas">DÍAS</small>
                             </span>
                             <span class="container-number">
                                 <p class="cpm-carrera-font">${this.formatNumber(hours)}</p>
-                                <small>HRS</small>
+                                <small class="notas">HRS</small>
                             </span>
                             <span class="container-number">
                                 <p class="cpm-carrera-font">${this.formatNumber(minutes)}</p>
-                                <small>MINS</small>
+                                <small class="notas">MINS</small>
                             </span>
                             <span class="container-number">
                                 <p class="cpm-carrera-font"> ${this.formatNumber(seconds)}</p>
-                                <small>SEGS</small>
+                                <small class="notas">SEGS</small>
                             </span>
                         </div>
                     </aside>

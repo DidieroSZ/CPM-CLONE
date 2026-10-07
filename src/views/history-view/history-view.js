@@ -38,13 +38,13 @@ export class HistoryView extends LitElement {
                 <div class="page-shell inner-container d-flexx " data-stagger>
                     <article class="top-text-container">
                         <p class="eyebrow eyebrow-next"><span></span> una carrea con propósito</p>
-                        <h2>75 Años <br> Tranformando <br>Vidas.</h2>
+                        <h2 class="titulo02">75 Años <br> Tranformando <br>Vidas.</h2>
                     </article>
 
                     <aside class="first-text">
                         <p>Caja Popular Mexicana convoca <br>a sus socio y personas interesadas en participar en una carrera que reúne comunidad, movimiento y bienestar.</p>
                     </aside>
-                    <aside class="second-text">
+                    <aside class="second-text texto">
                         <p>La cita es el domingo 04 de octubre del 2026 en Oaxaca de Juárez. Corre 5 o 10 kilómetros y forma parte de esta celebración.</p>
                         <a class="text-link" href="#carrera">Quiero registrarme <i data-lucide="move-right"></i></a>
                     </aside>

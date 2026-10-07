@@ -31,23 +31,56 @@ export class HomePage extends LitElement {
         css`${unsafeCSS(styles)}`
     ];
 
+    connectedCallback() {
+        super.connectedCallback();
+
+        this.addEventListener(
+            'navigate-section',
+            this.handleNavigation
+        );
+    }
+
+    disconnectedCallback() {
+        this.removeEventListener(
+            'navigate-section',
+            this.handleNavigation
+        );
+
+        super.disconnectedCallback();
+    }
+
     render() {
         return html`
             <main>
                 <nav-component></nav-component>
-                <header-view></header-view>
+                <header-view id="Inicio"></header-view>
                 <counter-component></counter-component>
                 <overview-component></overview-component>
-                <history-view></history-view>
-                <convocatoria-view></convocatoria-view>
-                <distancias-view></distancias-view>
-                <benefits-view></benefits-view>
-                <register-view></register-view>
-                <prizes-view></prizes-view>
-                <faq-component></faq-component>
+                <history-view id="Carrera"></history-view>
+                <convocatoria-view id="Convocatoria"></convocatoria-view>
+                <distancias-view id="Distancias"></distancias-view>
+                <benefits-view id="Kit"></benefits-view>
+                <register-view id="Registro"></register-view>
+                <prizes-view id="Premiacion"></prizes-view>
+                <faq-component id="FAQS"></faq-component>
                 <footer-component></footer-component>
             </main>
         `;
+    }
+
+    handleNavigation(event) {
+        const target = event.detail.target;
+
+        const section = this.renderRoot.querySelector(
+            `#${target}`
+        );
+
+        if (!section) return;
+
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
 }
 customElements.define('home-page', HomePage);

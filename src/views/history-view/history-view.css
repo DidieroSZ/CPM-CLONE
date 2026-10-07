@@ -21,25 +21,18 @@
             .top-text-container > .eyebrow{
                 margin-bottom: var(--Pad32);
             }
-            .top-text-container > h2{
-                font-size: clamp(2.7rem, 5vw, 5.4rem);
-                font-family: 'Alfa Slab One', serif;
-                text-transform: uppercase;
-                font-weight: 400;
-                line-height: .98;
-                letter-spacing: -.025em;
-            }
         .first-text{
             margin-right: auto;
             width: 600px;
             font-size: var(--Pad32);
+            color: var(--N300);
         }
         .second-text{
             width: 400px;
             border-left: solid 4px var(--V100);
             padding: var(--Pad16);
             line-height: 1.7;
-            font-size: 16px;
+            color: var(--N300);
         }
             .second-text > a{
                 display: inline-flex;

@@ -38,7 +38,7 @@ export class ConvocatoriaView extends LitElement {
                 <div class="page-shell" >
                     <article class="top-text-container" data-reveal>
                         <p class="eyebrow eyebrow-next"><span></span> TODO LO QUE NECESITAS SABER</p>
-                        <h2>CONVOCATORIA</h2>
+                        <h2 class="titulo02">CONVOCATORIA</h2>
                     </article>
 
                     <aside class="card-container" data-stagger>

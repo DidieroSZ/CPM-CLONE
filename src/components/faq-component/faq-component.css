@@ -9,7 +9,7 @@
             max-width: 430px;
         }
             .section-intro > p:last-child {
-                color: #727c73;
+                color: var(--Gris);
                 margin-top: 22px;
                 max-width: 250px;
                 line-height: 1.5;
@@ -39,7 +39,7 @@
                     display: none
                 }
                     .faq-list summary svg {
-                        width: 15px;
+                        width: 17px;
                         transition: transform .2s;
                         color: var(--V300)
                     }

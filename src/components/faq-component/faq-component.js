@@ -42,7 +42,7 @@ export class FaqComponent extends LitElement {
                     <div class="section-heading section-intro" data-reveal>
                         <div>
                             <p class="eyebrow eyebrow-next"><span></span> Preguntas frecuentes</p>
-                            <h2>Todo<br><em>claro.</em></h2>
+                            <h2 class="titulo02">Todo<br><em>claro.</em></h2>
                         </div>
                         <p>Resuelve lo esencial antes de comenzar tu carrera.</p>
                     </div>
